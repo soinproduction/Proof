@@ -8,7 +8,17 @@ import {
   removeCustomClass,
   removeClassInArray,
 } from "../functions/customFunctions";
-const { overlay, burger, mobileMenu, mainLinks, mobileBurger, bodyEl } = vars;
+const {
+  overlay,
+  burger,
+  mobileMenu,
+  mainLinks,
+  mobileBurger,
+  bodyEl,
+  triggerSocial,
+  closeSocial,
+  headerSocial
+ } = vars;
 
 const mobileMenuHandler = function (overlay, mobileMenu, burger) {
   burger.addEventListener("click", function () {
@@ -40,12 +50,27 @@ if (burger) {
   });
 }
 
-if (overlay) {
-  mobileMenuHandler(overlay, mobileMenu, burger);
-  mobileMenuHandler(overlay, mobileMenu, mobileBurger);
-  overlay.addEventListener("click", function (e) {
-    if (e.target.classList.contains("overlay")) {
-      hideMenuHandler(overlay, mobileMenu, burger);
-    }
+// if (overlay) {
+//   mobileMenuHandler(overlay, mobileMenu, burger);
+//   mobileMenuHandler(overlay, mobileMenu, mobileBurger);
+//   overlay.addEventListener("click", function (e) {
+//     if (e.target.classList.contains("overlay")) {
+//       hideMenuHandler(overlay, mobileMenu, burger);
+//     }
+//   });
+// }
+
+
+if(triggerSocial && closeSocial) {
+  triggerSocial.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleCustomClass(headerSocial, 'active');
+    toggleCustomClass(triggerSocial, 'active');
   });
+
+  closeSocial.addEventListener('click', (e) =>{
+    e.preventDefault();
+    removeCustomClass(headerSocial, 'active');
+    removeCustomClass(triggerSocial, 'active');
+  })
 }

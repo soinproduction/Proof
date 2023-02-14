@@ -1,0 +1,49 @@
+.calc-form {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-gap: 20px;
+
+  &__legend {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(var(--cl-f),1.0);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 8px;
+
+    &.full-row {
+      grid-column: 1/span 2;
+    }
+  }
+
+  &__deposit {
+    height: 54px;
+    width: 100%;
+    background: rgba(var(--bg-n),1.0);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    padding: 0 20px;
+  }
+
+  &__value {
+    font-family: rgba(var(--cl-a),1.0);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 100%;
+    color: rgba(var(--cl-f),1.0);
+
+    b {
+      font-weight: normal;
+      color: rgba(var(--cl-a),1.0);
+    }
+  }
+}

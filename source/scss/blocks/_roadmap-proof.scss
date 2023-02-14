@@ -1,0 +1,150 @@
+.roadmap-proof {
+  padding: 20px 0 100px;
+  background-image: url(../img/roadmap-bg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    grid-gap: 40px;
+  }
+
+  &__list {
+    width: 100%;
+    counter-reset: value;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 110px;
+    position: relative;
+
+    &::before {
+      left: calc(120px / 2);
+      right: calc(120px / 2);
+      height: 3px;
+      position: absolute;
+      content: '';
+      background-image: var(--roadmap-line);
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 3px;
+      background-size: 100% 100%;
+      bottom: 50%;
+      pointer-events: none;
+    }
+
+    &::after {
+      left: calc(120px / 2);
+      right: calc(120px / 2);
+      height: 100%;
+      background-image: var(--roadmap-wave);
+      background-size: 100% 100%;
+      position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      content: '';
+      pointer-events: none;
+    }
+  }
+
+  &__item {
+    width: 120px;
+    --size: 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: var(--size);
+    position: relative;
+
+    &:nth-child(even) {
+      flex-direction: column-reverse;
+      transform: translateY(56%);
+
+      .roadmap-proof__item-row {
+        flex-direction: inherit;
+      }
+    }
+
+    &-row {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      grid-gap: 6px;
+    }
+
+    &::before {
+      width: 3px;
+      height: var(--size);
+      top: 50%;
+      background-image: var(--roadmap-dashed);
+      position: absolute;
+      content: '';
+      left: 50%;
+      transform: translate(-50%,-50%);
+      pointer-events: none;
+    }
+  }
+
+  &__descr {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #D3D3D3;
+    height: 24px;
+    display: flex;
+    align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+
+  }
+
+  &__value {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      counter-increment: value;
+      content: counters(value,"");
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+      color: rgba(var(--cl-a),1.0);
+      pointer-events: none;
+    }
+
+    &::after {
+      position: absolute;
+      width: 82px;
+      height: 82px;
+      background-image: var(--roadmap-value-bg);
+      background-size: 100% 100%;
+      content: '';
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -2;
+      pointer-events: none;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+  }
+}

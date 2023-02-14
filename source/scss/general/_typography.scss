@@ -57,10 +57,16 @@
   border: 1px solid var(--br-a);
   border-radius: 12px;
   color: rgba(var(--cl-a),1.0);
+  transition: all .4s;
 
   svg {
     fill: currentColor;
     transition: inherit;
+  }
+
+  &.active {
+    background-color: rgba(var(--bg-e),1.0);
+    border-color: var(--br-d);
   }
 }
 

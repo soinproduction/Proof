@@ -24,6 +24,12 @@ export default {
 
   mainSlider: document.querySelector('.main-slider .swiper-container'),
   programBox: document.querySelector('.program-section__sliders'),
+  triggerSocial: document.querySelector('.trigger-social'),
+  closeSocial: document.querySelector('.header-social__close'),
+  headerSocial: document.querySelector('.header-social'),
+  mainLinks: [...document.querySelectorAll('.main-nav__link')],
+  observerSectons: [...document.querySelectorAll('.observer-sec')],
+
 
 
 
@@ -35,7 +41,7 @@ export default {
   hiddenList: document.querySelector('.hidden-list'),
   mobileMenu: document.querySelector('.mobile-menu'),
 
-  mainLinks: [...document.querySelectorAll('.mobile-link')],
+
 
 
 
