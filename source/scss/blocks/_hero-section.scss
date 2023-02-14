@@ -1,0 +1,31 @@
+.hero-section {
+  padding: 60px 0 70px;
+  position: relative;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: var(--hero-gradient);
+
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 60px;
+    min-height: Min(28vw, 308px);
+  }
+
+  &__top {
+    max-width: 485px;
+  }
+
+  &__image {
+    position: absolute;
+    top: -10%;
+    right: calc(Min(14.727vw, 162px) * -1);
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

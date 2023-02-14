@@ -1,0 +1,49 @@
+.main-nav {
+
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    grid-gap: 20px;
+  }
+
+  &__link {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(var(--cl-d),1.0);
+    display: flex;
+    align-items: center;
+    grid-gap: 5px;
+    position: relative;
+    transition: .2s linear;
+
+    .custom-icon {
+      position: absolute;
+
+      &--star {
+        bottom: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: .4;
+        transition: inherit;
+      }
+    }
+
+    svg {
+      fill: transparent;
+      stroke: currentColor;
+    }
+
+    &:hover {
+      color: rgba(var(--cl-a),1.0);
+
+      .custom-icon {
+        opacity: 1;
+      }
+    }
+  }
+}

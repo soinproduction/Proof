@@ -1,0 +1,106 @@
+.logo {
+  padding-right: 20px;
+  border-right: 1px solid var(--br-b);
+}
+
+.earn-planets {
+  border-radius: 90px;
+  background-image: url(../img/sprite/earn-bg2.svg), var(--gradient-a);
+  padding: 10px 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 100%;
+  color: rgba(var(--cl-d),1.0);
+
+  .custom-icon {
+    position: absolute;
+    right: 1px;
+    top: -5px;
+  }
+}
+
+.blue-btn {
+  background: rgba(var(--bg-e),1.0);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 4px;
+
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: capitalize;
+  color: rgba(var(--cl-a),1.0);
+
+  svg {
+    fill: transparent;
+  }
+}
+
+.more-btn {
+  width: 40px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--br-a);
+  border-radius: 12px;
+  color: rgba(var(--cl-a),1.0);
+
+  svg {
+    fill: currentColor;
+    transition: inherit;
+  }
+}
+
+.read-more {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 100%;
+  color: rgba(var(--cl-f),1.0);
+  transition: color .4s;
+  display: flex;
+  align-items: center;
+  grid-gap: 4px;
+
+  svg {
+    fill: transparent;
+    stroke: currentColor;
+  }
+}
+
+.click-triger {
+  display: flex;
+  align-items: center;
+  grid-gap: 8px;
+  justify-content: center;
+  width: fit-content;
+
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 112%;
+  color: rgba(var(--cl-f),1.0);
+
+  svg {
+    fill: transparent;
+  }
+}
+
+.blue-text {
+  color: rgba(var(--cl-e),1.0);
+}

@@ -1,0 +1,102 @@
+// --------------- hex to rgba mixin ---------------
+@function HexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+:root {
+// --------------- default global variable ---------------
+  --body-bg: #12192B;
+  --body-font-size: 16px;
+  --content-width: 1100px;
+  --content-width-mode: 1280px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-width-mode: calc(var(--content-width-mode) + (var(--container-offset) * 2));
+
+// --------------- default JS variable ---------------
+  --header-height: 62px;
+// --------------- default JS tablet variable ---------------
+  // @media (max-width: 1024px) {
+  //   --header-height: 65px;
+  // }
+
+// --------------- default JS small-tablet variable ---------------
+  // @media (max-width: 767px) {
+  //   --header-height:82px;
+  // }
+
+
+// --------------- default scroll variable ---------------
+  --scrollbar-thumb: #6866F6;
+  --scrollbar-thumb-hover: #f6866F6ff;
+  --scrollbar-track:  #05031d;
+  --scrollbar-track-hover: #05031d;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+
+// --------------- default slect variable ---------------
+  --select-inner-bg: #404040;
+  --select-inner-border: #FDFDFD;
+  --select-focus-border: #FDFDFD;
+
+// --------------- default font-family variable ---------------
+  --font-family: "Codec Pro" , sans-serif; // var(--font-family);
+  --font-family2: "Gilroy" , sans-serif; // var(--font-family2);
+
+
+// --------------- default text color variable ---------------
+  // --burger-cl: #{HexToRGB(#00d655)};
+
+  --cl-a: #{HexToRGB(#ffffff)}; // rgba(var(--cl-a),1.0);
+  --cl-b: #{HexToRGB(#000000)}; // rgba(var(--cl-b),1.0);
+  --cl-c: #{HexToRGB(#101729)}; // rgba(var(--cl-c),1.0);
+  --cl-d: #{HexToRGB(#94A3B8)}; // rgba(var(--cl-d),1.0);
+  --cl-e: #{HexToRGB(#1E6FF6)}; // rgba(var(--cl-e),1.0);
+  --cl-f: #{HexToRGB(#64748B)}; // rgba(var(--cl-f),1.0);
+  --cl-g: #{HexToRGB(#161F35)}; // rgba(var(--cl-g),1.0);
+  --cl-k: #{HexToRGB(#172746)}; // rgba(var(--cl-k),1.0);
+  --cl-l: #{HexToRGB(#2E5495)}; // rgba(var(--cl-l),1.0);
+
+
+// --------------- default background cl variable ---------------
+  --bg-a: #{HexToRGB(#ffffff)}; // rgba(var(--bg-a),1.0);
+  --bg-b: #{HexToRGB(#000000)}; // rgba(var(--bg-b),1.0);
+  --bg-c: #{HexToRGB(#101729)}; // rgba(var(--bg-c),1.0);
+  --bg-d: #{HexToRGB(#94A3B8)}; // rgba(var(--bg-d),1.0);
+  --bg-e: #{HexToRGB(#1E6FF6)}; // rgba(var(--bg-e),1.0);
+  --bg-f: #{HexToRGB(#64748B)}; // rgba(var(--bg-f),1.0);
+  --bg-g: #{HexToRGB(#161F35)}; // rgba(var(--bg-g),1.0);
+  --bg-k: #{HexToRGB(#172746)}; // rgba(var(--bg-k),1.0);
+  --bg-l: #{HexToRGB(#2E5495)}; // rgba(var(--bg-l),1.0);
+
+
+
+// --------------- default border cl variable ---------------
+  --br-a: #3D3E5C; // var(--br-a);
+  --br-b: #262D3D; // var(--br-b);
+
+  --br-c: #6866F6; // var(--br-c);
+  --br-d: #212B62; // var(--br-d);
+  --br-e: #293874; // var(--br-e);
+  --br-f: #546DB3; // var(--br-f);
+  --br-g: #66F6A8; // var(--br-g);
+
+
+// --------------- gradient background cl variable ---------------
+
+  --gradient-a:linear-gradient(90deg, #1E2346 0%, #312783 100%);
+  --gradient-b:linear-gradient(0deg, rgba(16,23,41,0.36226126192664565) 0%, rgba(16,23,41,0.995314483215161) 86%);
+
+  --gradient-c: linear-gradient(90deg, #FF5D00 -23.81%, #FFB900 74.11%, #FFFB00 144.05%);
+  --gradient-d: linear-gradient(90deg, #FF75FF 0%, #2F2DB1 89.23%);
+  --gradient-e: linear-gradient(90deg, #FF5D00 33.02%, #FFFB00 106.45%);
+
+  --gradient-f: linear-gradient(90deg, rgba(255, 226, 42, 0.9) -16.15%, rgba(224, 20, 46, 0.9) 103.08%);
+  --gradient-g: linear-gradient(280.84deg, #161F35 -2.98%, #273B6C 102.72%);
+
+
+
+// ---------------default background modal variable-----------
+
+--bm-a: #{HexToRGB(#253A75)}; // rgba(var(--bm-a),1.0);
+--bm-b: #{HexToRGB(#6966f600)}; // rgba(var(--bm-b),1.0);
+--bm-c: #{HexToRGB(#08142800)}; // rgba(var(--bm-c),1.0);
+}

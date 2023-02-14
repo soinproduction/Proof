@@ -1,0 +1,31 @@
+.article-social {
+  --item-size: 36px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 15px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    grid-gap: 14px;
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(var(--cl-f),1.0);
+  }
+
+  &__link {
+    width: var(--item-size);
+    height: var(--item-size);
+    background: rgba(var(--bg-k),1.0);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

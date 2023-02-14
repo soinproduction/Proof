@@ -1,0 +1,31 @@
+header {
+ background-color: rgba(var(--bg-c),1.0);
+ padding: 12px 0;
+ position: fixed;
+ left: 0;
+ width: 100%;
+ top: 0;
+ z-index: 20;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+  }
+
+  &__wallet {
+    width: 168px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  &__nav {
+    flex-grow: 1;
+  }
+}

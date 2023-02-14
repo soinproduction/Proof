@@ -1,0 +1,28 @@
+.benefits-section {
+  padding: 60px 0 60px;
+  background: url(../img/benifits-gradient.png), url(../img/benifits.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 10px;
+  }
+
+  &__top {
+
+    .custom-icon--star {
+      position: absolute;
+      width: 210px;
+      height: 115px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: .15;
+      bottom: -10px;
+    }
+  }
+}

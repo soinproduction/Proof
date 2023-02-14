@@ -1,0 +1,40 @@
+.hero-info {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  max-width: 400px;
+  grid-gap: 40px;
+
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 6px 14px;
+  }
+
+  &__icon {
+    grid-row: 1 / span 2;
+  }
+
+  &__title,
+  &__value {
+    grid-column: 2;
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 129%;
+    color: rgba(var(--cl-f),1.0);
+  }
+
+  &__value {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 100%;
+    color: rgba(var(--cl-a),1.0);
+  }
+}
