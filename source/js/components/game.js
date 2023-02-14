@@ -1,13 +1,10 @@
 import vars from '../_vars';
-
 import { addCustomClass, toggleCustomClass } from '../functions/customFunctions';
-
-
 const {game} = vars;
 
 if(game) {
-
-  let gameList = game.querySelector('.game__list');
+  const gameList = game.querySelector('.game__list');
+  const gameParent = game.querySelector('.game');
   const itemQty = gameList.getAttribute('data-item-gty');
 
   for (let i = 0; i < +itemQty; i++) {
@@ -18,13 +15,15 @@ if(game) {
   (function itemHandler(){
     gameList.addEventListener('click', function(e){
       e.stopPropagation();
-
       // !gameList.querySelector('.game__item.active') ? addCustomClass(e.target, 'active') : '';
-
       toggleCustomClass(e.target, 'active')
-
-      console.log(e.target)
     })
   })();
+
+
+  game.querySelector('.game-box__btn').addEventListener('click', function(e){
+    e.preventDefault()
+    toggleCustomClass(gameParent, 'active');
+  });
 }
 

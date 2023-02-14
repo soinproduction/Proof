@@ -600,32 +600,184 @@
               EarnPlanets
             </span>
 
-            <div class="game-box">
-              <div class="game" id="game">
+            <div class="game-box" id="game">
+              <div class="game">
                 <ul class="game__list" data-item-gty="36"></ul>
-              </div>
+                <div class="game-rules">
+                  <div class="game-rules__info">
+                    <div class="game-rules__image">
+                      <img width="123" height="112" src="img/game/rules-prev.svg" alt="prev">
+                    </div>
+                    <p>
+                      Get your bonus in seconds, click on the numbers in order from 1 to 9 and get your bonus of <span class="green-text">0.001 TRX</span> to your wallet instantly, the number of games is unlimited.
+                    </p>
+                  </div>
 
+                  <ul class="game-rules__steps">
+                    <li class="game-rules__item">
+                      <div class="game-rules__icon">
+                        <img width="21" height="44" src="img/sprite/rules.svg" alt="icon">
+                      </div>
+                      <span class="game-rules__descr">
+                        Enter your wallet to start
+                      </span>
+                    </li>
+                    <li class="game-rules__item">
+                      <div class="game-rules__icon">
+                        <img width="21" height="44" src="img/sprite/rules2.svg" alt="icon">
+                      </div>
+                      <span class="game-rules__descr">
+                        Press the Appearing Button from <b>1</b> to <b>9</b>
+                      </span>
+                    </li>
+                    <li class="game-rules__item">
+                      <div class="game-rules__icon">
+                        <img width="92" height="44" src="img/sprite/rules3.svg" alt="icon">
+                      </div>
+                      <span class="game-rules__descr">
+                        Win the <b>+0.001 TRX</b> Prize
+                      </span>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
               <form action="#" class="game-box__form main-form">
                 <label for="#" class="game-box__label main-form__label">
-                  <input type="text" class="game-box__input main-form__input" placeholder="Enter your wallet...">
+                  <input type="text" class="game-box__input main-form__input error" placeholder="Enter your wallet...">
                   <span class="game-box__icon">
                     <svg width="21" height="21">
                       <use href="img/sprite/sprite.svg#wallet"></use>
                     </svg>
                   </span>
                 </label>
-
                 <button class="blue-btn game-box__btn">
-
+                  Start Game
                 </button>
-
               </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="calculator-section">
+      <div class="container">
+        <div class="calculator-section__inner">
+          <div class="main-top">
+            <h2 class="main-top__title">
+              Profit calculator
+            </h2>
+          </div>
+
+          <div class="calculator-section__box">
+            <div class="calculator-section__coll calc-box">
+              <div class="calc-box__baner">
+                <h2 class="calc-box__title">
+                  Earn with
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#cup'></use>
+                  </svg>
+                  <span class="blue-text">
+                    ProofStaking!
+                  </span>
+                </h2>
+              </div>
+
+            </div>
+            <div class="calculator-section__coll calc-levels">
+              <ul class="calc-levels__list">
+                <li class="calc-levels__item">
+                  <span class="calc-levels__label">
+                    1 Level
+                  </span>
+                  <div class="calc-levels__row">
+                    <span class="calc-levels__percent">
+                      1%
+                    </span>
+                    <span class="calc-levels__value">
+                      100 - 500 GH/s
+                    </span>
+                  </div>
+                </li>
+                <li class="calc-levels__item">
+                  <span class="calc-levels__label">
+                    2 Level
+                  </span>
+                  <div class="calc-levels__row">
+                    <span class="calc-levels__percent">
+                      1,4%
+                    </span>
+                    <span class="calc-levels__value">
+                      501 - 2000 GH/s
+                    </span>
+                  </div>
+                </li>
+                <li class="calc-levels__item">
+                  <span class="calc-levels__label">
+                    3 Level
+                  </span>
+                  <div class="calc-levels__row">
+                    <span class="calc-levels__percent">
+                      1,8%
+                    </span>
+                    <span class="calc-levels__value">
+                      2001 - 6000 GH/s
+                    </span>
+                  </div>
+                </li>
+                <li class="calc-levels__item">
+                  <span class="calc-levels__label">
+                    4 Level
+                  </span>
+                  <div class="calc-levels__row">
+                    <span class="calc-levels__percent">
+                      2,2%
+                    </span>
+                    <span class="calc-levels__value">
+                      60001 - 15000 GH/s
+                    </span>
+                  </div>
+                </li>
+                <li class="calc-levels__item">
+                  <span class="calc-levels__label">
+                    5 Level
+                  </span>
+                  <div class="calc-levels__row">
+                    <span class="calc-levels__percent">
+                      2,6%
+                    </span>
+                    <span class="calc-levels__value">
+                      15001 - 50000 GH/s
+                    </span>
+                  </div>
+                </li>
+                <li class="calc-levels__item">
+                  <span class="calc-levels__label">
+                    6 Level
+                  </span>
+                  <div class="calc-levels__row">
+                    <span class="calc-levels__percent">
+                      3%
+                    </span>
+                    <span class="calc-levels__value">
+                      50001 - ......... GH/s
+                    </span>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="warn-block">
+                <div class="warn-block__icon">
+                  <img width="40" height="37" src="img/warn.svg" alt="icon">
+                </div>
+                The power price is calculated as follows 1 TRX = 1 GH/s
+              </div>
 
             </div>
 
-
-
           </div>
+
         </div>
       </div>
     </section>

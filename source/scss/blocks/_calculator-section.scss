@@ -1,0 +1,18 @@
+.calculator-section {
+  padding: 30px 0 100px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    grid-gap: 40px;
+  }
+
+  &__box {
+    display: grid;
+    grid-gap: clamp(20px, 3.636vw, 40px);
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

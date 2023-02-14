@@ -1,0 +1,70 @@
+.calc-box {
+  padding: 30px;
+  background: rgba(var(--bg-g),1.0);
+  border-radius: 24px;
+
+  &__title {
+    max-width: 20 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-gap: 0 10px;
+    align-items: baseline;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 125%;
+    color: rgba(var(--cl-a),1.0);
+  }
+
+  svg {
+    flex-shrink: 0;
+    fill: transparent;
+  }
+
+  &__baner {
+    --stars-bg: url(../img/calc-layer.png);
+    --smile-bg: url(../img/calc-smile.png);
+
+    background: rgba(var(--bg-r),1.0);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    min-height: 110px;
+    background-image: url(../img/calc-baner.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 25px 30px;
+
+    &::before {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      content: '';
+      background-image: var(--stars-bg);
+      background-size: cover;
+      background-position: left;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+
+    &::after {
+      width: 162px;
+      height: 110px;
+      right: 10%;
+      top: 0;
+      position: absolute;
+      content: '';
+      background-image: var(--smile-bg);
+      background-size: 100% 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+  }
+}

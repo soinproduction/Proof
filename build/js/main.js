@@ -115,7 +115,8 @@ const {
   game
 } = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
 if (game) {
-  let gameList = game.querySelector('.game__list');
+  const gameList = game.querySelector('.game__list');
+  const gameParent = game.querySelector('.game');
   const itemQty = gameList.getAttribute('data-item-gty');
   for (let i = 0; i < +itemQty; i++) {
     let item = `<li class="game__item"><span>${Math.floor(Math.random() * 100)}</span></li>`;
@@ -124,13 +125,14 @@ if (game) {
   (function itemHandler() {
     gameList.addEventListener('click', function (e) {
       e.stopPropagation();
-
       // !gameList.querySelector('.game__item.active') ? addCustomClass(e.target, 'active') : '';
-
       (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.toggleCustomClass)(e.target, 'active');
-      console.log(e.target);
     });
   })();
+  game.querySelector('.game-box__btn').addEventListener('click', function (e) {
+    e.preventDefault();
+    (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.toggleCustomClass)(gameParent, 'active');
+  });
 }
 
 /***/ }),
