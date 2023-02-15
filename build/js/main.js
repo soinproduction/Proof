@@ -59,6 +59,7 @@ __webpack_require__.r(__webpack_exports__);
   burger: document.querySelector('.header .burger'),
   mobileBurger: document.querySelector('.mobile-menu .burger'),
   // mobileMenu: document.querySelector('.header-box__nav'),
+
   header: document.querySelector("header"),
   game: document.getElementById('game'),
   mainSlider: document.querySelector('.main-slider .swiper-container'),
@@ -66,6 +67,7 @@ __webpack_require__.r(__webpack_exports__);
   triggerSocial: document.querySelector('.trigger-social'),
   closeSocial: document.querySelector('.header-social__close'),
   headerSocial: document.querySelector('.header-social'),
+  newsInner: document.querySelector('.news-section__inner'),
   mainLinks: [...document.querySelectorAll('.main-nav__link')],
   observerSectons: [...document.querySelectorAll('.observer-sec')],
   // default variables
@@ -404,8 +406,27 @@ __webpack_require__.r(__webpack_exports__);
 
 const {
   mainSlider,
-  programBox
+  programBox,
+  newsInner
 } = _vars__WEBPACK_IMPORTED_MODULE_1__["default"];
+if (newsInner) {
+  const newsSlider = newsInner.querySelector('.swiper-container');
+  const newsSliderPrev = newsInner.querySelector('.news-prev');
+  const newsSliderNext = newsInner.querySelector('.news-next');
+  new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(newsSlider, {
+    slidesPerView: 3,
+    slidesPerColumn: 2,
+    slidesPerColumnFill: 'row',
+    spaceBetween: 20,
+    observer: true,
+    watchOverflow: true,
+    observeParents: true,
+    navigation: {
+      nextEl: newsSliderNext,
+      prevEl: newsSliderPrev
+    }
+  });
+}
 new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(mainSlider, {
   slidesPerView: 'auto',
   spaceBetween: 30,
@@ -426,50 +447,52 @@ const navigationContent = [{
   name: 'Bonus 1',
   descr: 'Connect Wallet',
   class: 'orange',
-  iconName: 'icon.svg'
+  iconSrc: 'img/program-slider/icon.svg'
 }, {
   name: 'level 1',
   descr: 'Bring your friends',
   class: 'purpure',
-  iconName: 'icon2.svg'
+  iconSrc: 'img/program-slider/icon2.svg'
 }, {
   name: 'level 2',
   descr: "Get 5% from your friend's referral",
   class: 'red',
-  iconName: 'icon3.svg'
+  iconSrc: 'img/program-slider/icon3.svg'
 }];
-const mySwiper = new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(programBox.querySelector('.program-slider'), {
-  slidesPerView: 'auto',
-  spaceBetween: 40,
-  loop: true,
-  observer: true,
-  watchOverflow: true,
-  observeParents: true,
-  allowTouchMove: true,
-  speed: 2500,
-  autoplay: {
-    delay: 3000
-  },
-  pagination: {
-    el: '.program-slider__nav',
-    clickable: 'true',
-    type: 'bullets',
-    renderBullet: function (index, className) {
-      return `
-          <li class="${className}">
-            <button class="program-button ${navigationContent[index].class}">
-              ${navigationContent[index].name}
-              <img class="program-button__icon" src="img/program-slider/${navigationContent[index].iconName}" alt="icon">
-              <span class="program-button__descr">
-                ${navigationContent[index].descr}
-              </span>
-              <i class="custom-icon custom-icon--nav program-button__stars"></i>
-            </button>
-          </li>
-        `;
+if (programBox) {
+  const mySwiper = new (_vendor_swiper__WEBPACK_IMPORTED_MODULE_0___default())(programBox.querySelector('.program-slider'), {
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+    loop: true,
+    observer: true,
+    watchOverflow: true,
+    observeParents: true,
+    allowTouchMove: true,
+    speed: 2500,
+    autoplay: {
+      delay: 3000
+    },
+    pagination: {
+      el: '.program-slider__nav',
+      clickable: 'true',
+      type: 'bullets',
+      renderBullet: function (index, className) {
+        return `
+            <li class="${className}">
+              <button class="program-button ${navigationContent[index].class}">
+                ${navigationContent[index].name}
+                <img class="program-button__icon" src="${navigationContent[index].iconSrc}" alt="icon">
+                <span class="program-button__descr">
+                  ${navigationContent[index].descr}
+                </span>
+                <i class="custom-icon custom-icon--nav program-button__stars"></i>
+              </button>
+            </li>
+          `;
+      }
     }
-  }
-});
+  });
+}
 
 /***/ }),
 

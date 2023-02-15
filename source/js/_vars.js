@@ -17,16 +17,16 @@ export default {
   burger: document.querySelector('.header .burger'),
   mobileBurger: document.querySelector('.mobile-menu .burger'),
   // mobileMenu: document.querySelector('.header-box__nav'),
+
+
   header: document.querySelector("header"),
-
   game: document.getElementById('game'),
-
-
   mainSlider: document.querySelector('.main-slider .swiper-container'),
   programBox: document.querySelector('.program-section__sliders'),
   triggerSocial: document.querySelector('.trigger-social'),
   closeSocial: document.querySelector('.header-social__close'),
   headerSocial: document.querySelector('.header-social'),
+  newsInner: document.querySelector('.news-section__inner'),
   mainLinks: [...document.querySelectorAll('.main-nav__link')],
   observerSectons: [...document.querySelectorAll('.observer-sec')],
 

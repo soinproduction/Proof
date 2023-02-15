@@ -1,0 +1,54 @@
+.sub-header {
+  background:
+  url(../img/header-l.png) left no-repeat,
+  url(../img/header-r.png) right no-repeat,
+  url(../img/header-stars.svg) center no-repeat,
+  var(--gradient);
+
+  &--news {
+    --gradient: linear-gradient(303.28deg, #3499DC 34.85%, #4A64FF 65.47%);
+  }
+  &--faq {
+    --gradient: linear-gradient(229.97deg, #A066FF 37.74%, #FF2879 71.95%);
+  }
+  &--roadmap {
+    --gradient: linear-gradient(226.99deg, #5E75DF 0%, #71BBDF 100%);
+  }
+
+  &__inner {
+    padding: 90px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-gap: 24px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 100%;
+    color: rgba(var(--cl-a),1.0);
+  }
+
+
+  &__descr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 6px;
+
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(var(--cl-a),1.0);
+  }
+}

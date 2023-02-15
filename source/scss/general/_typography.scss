@@ -113,3 +113,47 @@
 .green-text {
   color: rgba(var(--cl-m),1.0);
 }
+
+.back-news {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 5px;
+  max-width: 141px;
+  width: 100%;
+  height: 52px;
+  background: rgba(var(--bg-g),1.0);
+  border-radius: 12px;
+
+
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 14px;
+  text-transform: capitalize;
+  color: rgba(var(--cl-a),1.0);
+}
+
+.copy-link {
+  height: 46px;
+  width: 145px;
+  background: rgba(var(--bg-k),1.0);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 6px;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 100%;
+  color: rgba(var(--cl-a),1.0);
+
+
+  svg {
+    fill: transparent;
+    stroke: currentColor;
+  }
+}
