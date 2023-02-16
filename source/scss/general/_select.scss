@@ -19,6 +19,7 @@
     z-index: 6;
 
     & > svg {
+      stroke: rgba(var(--cl-d),1.0);
       transition: transform .4s linear;
     }
   }

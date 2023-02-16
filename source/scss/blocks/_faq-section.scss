@@ -1,0 +1,9 @@
+.faq-section {
+  padding: 60px 0 100px;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 42px;
+  }
+}

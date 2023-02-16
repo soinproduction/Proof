@@ -13,9 +13,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sliders */ "./source/js/components/sliders.js");
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/burger */ "./source/js/components/burger.js");
 /* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/select */ "./source/js/components/select.js");
-/* harmony import */ var _components_anchor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/anchor */ "./source/js/components/anchor.js");
-/* harmony import */ var _components_game__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/game */ "./source/js/components/game.js");
-/* harmony import */ var _components_observer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/observer */ "./source/js/components/observer.js");
+/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/accordions */ "./source/js/components/accordions.js");
+/* harmony import */ var _components_anchor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/anchor */ "./source/js/components/anchor.js");
+/* harmony import */ var _components_game__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/game */ "./source/js/components/game.js");
+/* harmony import */ var _components_observer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/observer */ "./source/js/components/observer.js");
+/* harmony import */ var _components_accFix__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/accFix */ "./source/js/components/accFix.js");
 // import './components/animations';
 
 
@@ -25,7 +27,8 @@ __webpack_require__.r(__webpack_exports__);
 // import './components/tabs';
 
 // import './components/replaceEl';
-// import './components/accordions';
+
+
 
 
 
@@ -70,6 +73,9 @@ __webpack_require__.r(__webpack_exports__);
   newsInner: document.querySelector('.news-section__inner'),
   mainLinks: [...document.querySelectorAll('.main-nav__link')],
   observerSectons: [...document.querySelectorAll('.observer-sec')],
+  accFaqBlock: document.querySelector('.faq-section__inner'),
+  accItem: [...document.querySelectorAll('.accordion__item.faq-item')],
+  accList: document.querySelector('.faq-section__list'),
   // default variables
   passForm: [...document.querySelectorAll('.password-form__label')],
   footerLabel: document.querySelector('.footer__label'),
@@ -107,6 +113,152 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+/***/ }),
+
+/***/ "./source/js/components/accFix.js":
+/*!****************************************!*\
+  !*** ./source/js/components/accFix.js ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/customFunctions */ "./source/js/functions/customFunctions.js");
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../_vars */ "./source/js/_vars.js");
+
+
+const {
+  accFaqBlock,
+  accItem,
+  accList
+} = _vars__WEBPACK_IMPORTED_MODULE_1__["default"];
+let flag = false;
+const newList = document.createElement('ul');
+function setDoubleCollumn(replaceItems, itemsParrent, mainParrent, newBlock, breakpoint) {
+  let containerWidth = document.documentElement.clientWidth;
+  if (!flag) {
+    mainParrent.appendChild(newBlock);
+    flag = true;
+  }
+  replaceItems.map((item, index) => {
+    if (!(0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.even)(index)) {
+      if (containerWidth <= `${breakpoint}`) {
+        itemsParrent.insertAdjacentElement('beforeend', replaceItems[index]);
+        newBlock.remove();
+        flag = false;
+      }
+      if (containerWidth > `${breakpoint}`) {
+        newBlock.classList.add('accordion', 'faq-section__list', 'accordion--clone');
+        newBlock.insertAdjacentElement('beforeend', replaceItems[index]);
+      }
+    }
+  });
+}
+if (accFaqBlock) {
+  (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_0__.addMultiListener)(window, 'resize DOMContentLoaded', () => {
+    setDoubleCollumn(accItem, accList, accFaqBlock, newList, 767);
+  });
+}
+
+/***/ }),
+
+/***/ "./source/js/components/accordions.js":
+/*!********************************************!*\
+  !*** ./source/js/components/accordions.js ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./source/js/_vars.js");
+/* harmony import */ var _functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/customFunctions */ "./source/js/functions/customFunctions.js");
+
+
+const {
+  accParrent
+} = _vars__WEBPACK_IMPORTED_MODULE_0__["default"];
+window.addEventListener('DOMContentLoaded', () => {
+  accParrent && accParrent.map(function (accordionParrent) {
+    if (accordionParrent) {
+      let multipleSetting = false;
+      let breakpoinSetting = false;
+      let defaultOpenSetting;
+      if (accordionParrent.dataset.single && accordionParrent.dataset.breakpoint) {
+        multipleSetting = accordionParrent.dataset.single; // true - включает сингл аккордион
+        breakpoinSetting = accordionParrent.dataset.breakpoint; // брейкпоинт сингл режима (если он true)
+      }
+
+      const getAccordions = function () {
+        let dataName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "[data-id]";
+        return accordionParrent.querySelectorAll(dataName);
+      };
+      const accordions = getAccordions();
+      let openedAccordion = null;
+      const closeAccordion = function (accordion) {
+        let className = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "active";
+        accordion.style.maxHeight = 0;
+        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.removeCustomClass)(accordion, className);
+      };
+      const openAccordion = function (accordion) {
+        let className = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "active";
+        accordion.style.maxHeight = accordion.scrollHeight + "px";
+        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.addCustomClass)(accordion, className);
+      };
+      const toggleAccordionButton = function (button) {
+        let className = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "active";
+        (0,_functions_customFunctions__WEBPACK_IMPORTED_MODULE_1__.toggleCustomClass)(button, className);
+      };
+      const checkIsAccordionOpen = function (accordion) {
+        return accordion.classList.contains('active');
+      };
+      const accordionClickHandler = function (e) {
+        e.preventDefault();
+        let curentDataNumber = this.dataset.id;
+        toggleAccordionButton(this);
+        const accordionContent = accordionParrent.querySelector(`[data-content="${curentDataNumber}"]`);
+        const isAccordionOpen = checkIsAccordionOpen(accordionContent);
+        if (isAccordionOpen) {
+          closeAccordion(accordionContent);
+          openedAccordion = null;
+        } else {
+          if (openedAccordion != null) {
+            const mobileSettings = () => {
+              let containerWidth = document.documentElement.clientWidth;
+              if (containerWidth <= breakpoinSetting && multipleSetting === 'true') {
+                closeAccordion(openedAccordion);
+                toggleAccordionButton(accordionParrent.querySelector(`[data-id="${openedAccordion.dataset.content}"]`));
+              }
+            };
+            window.addEventListener('resize', () => {
+              mobileSettings();
+            });
+            mobileSettings();
+          }
+          openAccordion(accordionContent);
+          openedAccordion = accordionContent;
+        }
+      };
+      const activateAccordion = function (accordions, handler) {
+        for (const accordion of accordions) {
+          accordion.addEventListener('click', handler);
+        }
+      };
+      const accordionDefaultOpen = currentId => {
+        const defaultOpenContent = accordionParrent.querySelector(`[data-content="${currentId}"]`);
+        const defaultOpenButton = accordionParrent.querySelector(`[data-id="${currentId}"]`);
+        openedAccordion = defaultOpenContent;
+        toggleAccordionButton(defaultOpenButton);
+        openAccordion(defaultOpenContent);
+      };
+      if (accordionParrent.dataset.default) {
+        defaultOpenSetting = accordionParrent.dataset.default; // получает id аккордиона который будет открыт по умолчанию
+        accordionDefaultOpen(defaultOpenSetting);
+      }
+      activateAccordion(accordions, accordionClickHandler);
+    }
+  });
+});
 
 /***/ }),
 
@@ -507,6 +659,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "addClassInArray": function() { return /* binding */ addClassInArray; },
 /* harmony export */   "addCustomClass": function() { return /* binding */ addCustomClass; },
+/* harmony export */   "addMultiListener": function() { return /* binding */ addMultiListener; },
 /* harmony export */   "elementHeight": function() { return /* binding */ elementHeight; },
 /* harmony export */   "even": function() { return /* binding */ even; },
 /* harmony export */   "removeClassInArray": function() { return /* binding */ removeClassInArray; },
@@ -514,6 +667,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "toggleClassInArray": function() { return /* binding */ toggleClassInArray; },
 /* harmony export */   "toggleCustomClass": function() { return /* binding */ toggleCustomClass; }
 /* harmony export */ });
+function addMultiListener(element, eventNames, listener) {
+  var events = eventNames.split(' ');
+  for (var i = 0, iLen = events.length; i < iLen; i++) {
+    element.addEventListener(events[i], listener, false);
+  }
+}
+// ----------------------------------------------------
 const even = n => !(n % 2);
 // ----------------------------------------------------
 const removeCustomClass = (item, customClass) => {

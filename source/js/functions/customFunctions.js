@@ -1,3 +1,10 @@
+export function addMultiListener(element, eventNames, listener) {
+  var events = eventNames.split(' ');
+  for (var i = 0, iLen = events.length; i < iLen; i++) {
+    element.addEventListener(events[i], listener, false);
+  }
+}
+// ----------------------------------------------------
 export const even = n => !(n % 2);
 // ----------------------------------------------------
 export const removeCustomClass = (item, customClass) => {
@@ -33,8 +40,8 @@ export const toggleClassInArray = (arr, customClass) => {
 export const elementHeight = (el, variableName) => {
   // el -- сам елемент (но не коллекция)
   // variableName -- строка, имя создаваемой переменной
-  if(el) {
-    function initListener(){
+  if (el) {
+    function initListener() {
       const elementHeight = el.offsetHeight;
       document.querySelector(':root').style.setProperty(`--${variableName}`, `${elementHeight}px`);
     }

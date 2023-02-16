@@ -30,6 +30,10 @@ export default {
   mainLinks: [...document.querySelectorAll('.main-nav__link')],
   observerSectons: [...document.querySelectorAll('.observer-sec')],
 
+  accFaqBlock: document.querySelector('.faq-section__inner'),
+  accItem: [...document.querySelectorAll('.accordion__item.faq-item')],
+  accList: document.querySelector('.faq-section__list'),
+
 
 
 
