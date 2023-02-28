@@ -662,11 +662,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "addMultiListener": function() { return /* binding */ addMultiListener; },
 /* harmony export */   "elementHeight": function() { return /* binding */ elementHeight; },
 /* harmony export */   "even": function() { return /* binding */ even; },
+/* harmony export */   "fadeIn": function() { return /* binding */ fadeIn; },
+/* harmony export */   "fadeOut": function() { return /* binding */ fadeOut; },
 /* harmony export */   "removeClassInArray": function() { return /* binding */ removeClassInArray; },
 /* harmony export */   "removeCustomClass": function() { return /* binding */ removeCustomClass; },
 /* harmony export */   "toggleClassInArray": function() { return /* binding */ toggleClassInArray; },
 /* harmony export */   "toggleCustomClass": function() { return /* binding */ toggleCustomClass; }
 /* harmony export */ });
+const fadeIn = (el, timeout, display) => {
+  el.style.opacity = 0;
+  el.style.display = display || 'block';
+  el.style.transition = `opacity ${timeout}ms`;
+  setTimeout(() => {
+    el.style.opacity = 1;
+  }, 10);
+};
+// ----------------------------------------------------
+const fadeOut = (el, timeout) => {
+  el.style.opacity = 1;
+  el.style.transition = `opacity ${timeout}ms`;
+  el.style.opacity = 0;
+  setTimeout(() => {
+    el.style.display = 'none';
+  }, timeout);
+};
+// ----------------------------------------------------
 function addMultiListener(element, eventNames, listener) {
   var events = eventNames.split(' ');
   for (var i = 0, iLen = events.length; i < iLen; i++) {

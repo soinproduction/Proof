@@ -2,6 +2,20 @@
   // padding: 20px 40px 30px;
   border-radius: 12px;
   background: rgba(var(--bg-r),1.0);
+  position: relative;
+
+  &::before {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    right: 15%;
+    z-index: 2;
+    top: 0;
+    transform: translateY(-20%);
+    content: '';
+    background-image: url(../img/faq-btn-capsule.png);
+
+  }
 
   & + & {
     margin-top: 24px;
@@ -95,7 +109,7 @@
         font-size: 12px;
         line-height: 150%;
         color: rgba(var(--cl-f),1.0);
-        min-height: 110px;
+        // min-height: 110px;
       }
 
       &::after {

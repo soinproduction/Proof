@@ -1,17 +1,17 @@
-import { even, addMultiListener} from '../functions/customFunctions'
+import { even, addMultiListener } from '../functions/customFunctions'
 import vars from '../_vars';
 
-const {accFaqBlock, accItem, accList} = vars;
+const { accFaqBlock, accItem, accList } = vars;
 
 let flag = false;
 const newList = document.createElement('ul');
 
-function setDoubleCollumn(replaceItems, itemsParrent ,mainParrent, newBlock, breakpoint) {
+function setDoubleCollumn(replaceItems, itemsParrent, mainParrent, newBlock, breakpoint) {
   let containerWidth = document.documentElement.clientWidth;
 
   if (!flag) {
-      mainParrent.appendChild(newBlock);
-      flag = true
+    mainParrent.appendChild(newBlock);
+    flag = true
   }
 
   replaceItems.map((item, index) => {
@@ -31,7 +31,7 @@ function setDoubleCollumn(replaceItems, itemsParrent ,mainParrent, newBlock, bre
 
 if (accFaqBlock) {
   addMultiListener(window, 'resize DOMContentLoaded', () => {
-    setDoubleCollumn(accItem, accList ,accFaqBlock, newList, 767);
+    setDoubleCollumn(accItem, accList, accFaqBlock, newList, 767);
   });
 }
 
