@@ -25,3 +25,18 @@ footer {
     color: rgba(var(--cl-d),1.0);
   }
 }
+
+.footer-mining {
+
+  &__inner {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: Min(5.455vw, 60px);
+  }
+
+  .footer__coll {
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,85 @@
+.mining-slider {
+  --slider-padding: Min(6.364vw, 70px);
+  max-width: calc(390px + var(--slider-padding));
+  padding-right: var(--slider-padding);
+}
+
+.minig-slide {
+  min-height: Min(14.727vw, 180px);
+  padding: 10px 20px 26px;
+  width: Min(34.545vw, 380px);
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  &::before,
+  &::after {
+    top: 0;
+    width: 100%;
+    height: 6000px;
+    position: absolute;
+    content: '';
+    left: 0;
+    background-image: url(../img/mining-slide/coin.png);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+    animation: top-bottom 200s linear infinite
+  }
+
+  &::after {
+    background-image: url(../img/mining-slide/coin2.png);
+    animation: top-bottom 1100s linear infinite;
+    opacity: .9;
+  }
+
+  &__btn {
+    width: 176px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(var(--cl-t),1.0);
+
+    background: #89D5FA;
+    box-shadow: 0px 0px 13.5529px rgba(137, 213, 250, 0.45);
+    border-radius: 12px;
+  }
+
+  &__image,
+  &__btn {
+    position: relative;
+    z-index: 2;
+  }
+
+  &--mode {
+    &::before {
+      background-image: url(../img/mining-slide/trash.png);
+    }
+
+    &::after {
+      background-image: url(../img/mining-slide/trash2.png);
+    }
+
+
+    .minig-slide__btn {
+      color: rgba(var(--cl-a),1.0);
+      background: #DB384E;
+      box-shadow: 0px 0px 13.5529px rgba(219, 56, 78, 0.45);
+    }
+  }
+
+}

@@ -1,0 +1,4 @@
+.mining-grid {
+  display: grid !important;
+  grid-template-columns: var(--aside-width) 1fr;
+}

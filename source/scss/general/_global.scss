@@ -169,6 +169,27 @@ input[type="number"] {
   clip-path: inset(100%);
 }
 
+.orange-bg {
+  &::before {
+    background: var(--gradient-c);
+  }
+}
+.purpure-bg {
+  &::before {
+    background: var(--gradient-d);
+  }
+}
+.red-bg {
+  &::before {
+    background: var(--gradient-e);
+  }
+}
+.green-bg {
+  &::before {
+    background: var(--gradient-h);
+  }
+}
+
 .container {
   position: relative;
   width: 100%;
@@ -212,14 +233,6 @@ input[type="number"] {
   background-attachment: fixed;
   overscroll-behavior: none !important;
   scroll-behavior: none !important;
-}
-
-.a-start {
-  align-items: flex-start !important;
-  padding-top: 0 !important;
-  height: calc(100% - var(--header-height)) !important;
-  top: calc(var(--header-height)) !important;
-  transition: none !important;
 }
 
 .page--ios .dis-scroll {

@@ -1,0 +1,17 @@
+.mining-section {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 60px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr .9fr;
+    grid-gap: 24px;
+  }
+}

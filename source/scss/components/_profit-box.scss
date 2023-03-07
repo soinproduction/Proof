@@ -1,0 +1,67 @@
+.profit-box {
+  display: flex;
+  grid-gap: 20px;
+  flex-direction: column;
+  width: 100%;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    grid-gap: 6px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    color: rgba(var(--cl-a),1.0);
+
+    svg {
+      fill: transparent;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 22px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+  }
+
+  &__name {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(var(--cl-f),1.0);
+  }
+
+  &__value {
+    width: 100%;
+    padding: 13px 10px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+
+    background: rgba(30, 111, 246, 0.3);
+    border: 1px dashed var(--br-d);
+    border-radius: 6px;
+
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: auto;
+    color: rgba(var(--cl-e),1.0);
+
+    i {
+      font-style: normal;
+      font-size: 20px;
+    }
+  }
+}

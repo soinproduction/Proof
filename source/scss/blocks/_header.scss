@@ -29,3 +29,33 @@ header {
     flex-grow: 1;
   }
 }
+
+.header-mining {
+  grid-gap: 0;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+
+  .logo {
+    margin-right: 20px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    grid-gap: 12px;
+    flex-grow: 1;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    grid-gap: 30px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    grid-gap: 30px;
+  }
+}

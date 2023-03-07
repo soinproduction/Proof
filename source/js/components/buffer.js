@@ -10,7 +10,10 @@ function copyFunction(textInput) {
 parrentBuffer.map(function(item){
   const currentInput =  item.querySelector('.buffer__input');
   const currentButton =  item.querySelector('.buffer__button');
-  currentButton.addEventListener('click', () => copyFunction(currentInput))
+  currentButton.addEventListener('click', function(e){
+    e.preventDefault();
+    copyFunction(currentInput);
+  })
 });
 
 

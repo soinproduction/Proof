@@ -3,7 +3,7 @@ import vars from "../_vars";
 import { throttle } from "../functions/throttle";
 import { even } from "../functions/customFunctions";
 
-const { mainSlider, programBox, newsInner } = vars;
+const { mainSlider, programBox, newsInner, minigSlider } = vars;
 
 if (newsInner) {
   const newsSlider = newsInner.querySelector('.swiper-container');
@@ -40,6 +40,23 @@ new Swiper(mainSlider, {
   parallax: true,
   autoplay: {
     delay: 2000,
+  },
+});
+
+
+new Swiper(minigSlider, {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+  observer: true,
+  watchOverflow: true,
+  centeredSlides: true,
+  observeParents: true,
+  allowTouchMove: true,
+  speed: 2000,
+
+  autoplay: {
+    delay: 8000,
   },
 });
 

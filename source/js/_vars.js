@@ -19,16 +19,21 @@ export default {
   // mobileMenu: document.querySelector('.header-box__nav'),
 
 
+  elem:document.querySelector('.mining-vidgets'),
+  footer: document.querySelector("footer"),
   header: document.querySelector("header"),
   game: document.getElementById('game'),
   mainSlider: document.querySelector('.main-slider .swiper-container'),
+  minigSlider: document.querySelector('.mining-slider .swiper-container'),
   programBox: document.querySelector('.program-section__sliders'),
   triggerSocial: document.querySelector('.trigger-social'),
   closeSocial: document.querySelector('.header-social__close'),
   headerSocial: document.querySelector('.header-social'),
   newsInner: document.querySelector('.news-section__inner'),
   mainLinks: [...document.querySelectorAll('.main-nav__link')],
+  filtersButtons: [...document.querySelectorAll('.mining-filters__button')],
   observerSectons: [...document.querySelectorAll('.observer-sec')],
+  dataName: [...document.querySelectorAll('.mining-card')],
 
   accFaqBlock: document.querySelector('.faq-section__inner'),
   accItem: [...document.querySelectorAll('.accordion__item.faq-item')],

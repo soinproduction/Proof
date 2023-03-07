@@ -1,31 +1,35 @@
 import { removeClassInArray, addCustomClass, removeCustomClass } from '../functions/customFunctions'
 import vars from '../_vars';
+import lottie from 'lottie-web';
+const {dataName ,activeClass} = vars;
 
-const {overlay, hiddenList,heroImage,counter} = vars;
+dataName.forEach(function(item) {
+  const currentName = item.getAttribute('data-name');
+  const icon = item.querySelector('.mining-card__icon');
+  const plusBnt = item.querySelector('.mining-card__plus');
+  const minusBnt = item.querySelector('.mining-card__minus');
 
-window.onload = function () {
+  const animationIcon = lottie.loadAnimation({
+    container: icon,
+    renderer: 'svg',
+    loop: true,
+    autoplay: false,
+    path: `../JSON/${currentName}.json`
+  });
 
-  hiddenList ? removeCustomClass(hiddenList, 'none') : '';
-  overlay ? removeCustomClass(overlay, 'none') : '';
-  heroImage ? removeCustomClass(heroImage, 'none-animate') : '';
+  plusBnt.addEventListener('click', function(e){
+    e.preventDefault;
+    addCustomClass(item, activeClass);
 
-  let limit = 0;
+    if (item.classList.contains(activeClass)) animationIcon.play()
+  });
 
-  for (let i = 0; i < counter.length; i++) {
-    setTimeout(function () {
-      let x = 0;
-      limit++;
-      let int = setInterval(function () {
-        x = x + Math.ceil(counter[i].dataset.to / 45);
-        counter[i].innerText = x;
-        if (x > counter[i].dataset.to) {
-          counter[i].innerText = counter[i].dataset.to;
-          clearInterval(int);
-        }
-      }, 22.5);
-    }, 1850)
+  minusBnt.addEventListener('click', function(e){
+    e.preventDefault;
 
-
-  }
-}
-
+    if (item.classList.contains(activeClass)) {
+      animationIcon.stop();
+      removeCustomClass(item, activeClass);
+    }
+  })
+});

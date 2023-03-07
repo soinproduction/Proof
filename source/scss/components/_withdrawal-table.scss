@@ -1,0 +1,111 @@
+.withdrawal-table {
+  --padding-x: clamp(20px, 6.364vw, 70px);
+  --template-coll: repeat(2, 1fr) .7fr;
+  --template-gap: 20px;
+
+  display: flex;
+  flex-direction: column;
+  grid-gap: 15px;
+
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0;
+  }
+
+  &__head {
+    display: grid;
+    grid-template-columns: var(--template-coll);
+    grid-gap: var(--template-gap);
+    padding: 0 var(--padding-x);
+
+    &-name {
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 100%;
+      color: rgba(var(--cl-f),1.0);
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: var(--template-coll);
+    grid-gap: var(--template-gap);
+    width: 100%;
+    padding: 14px var(--padding-x);
+
+    &:nth-child(odd) {
+      background: rgba(var(--cl-g),1.0);
+      border-radius: 12px;
+    }
+  }
+
+  &__name {
+    display: flex;
+    grid-gap: 14px;
+    align-items: center;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0px;
+  }
+
+  &__value {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(var(--cl-a),1.0);
+
+    i {
+      font-style: normal;
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(var(--cl-f),1.0);
+    }
+  }
+
+  &__date {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(var(--cl-f),1.0);
+
+    i {
+      font-style: normal;
+      color: rgba(var(--cl-e),1.0);
+    }
+  }
+
+  &__descr {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 120%;
+    color: rgba(var(--cl-f),1.0);
+  }
+
+  &__amount {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2px;
+  }
+
+  &__button {
+    height: 48px;
+  }
+}

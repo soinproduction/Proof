@@ -1,0 +1,88 @@
+.mining-profit {
+  padding: 30px 24px 40px;
+  background-color: rgba(var(--bg-g),1.0);
+  border-radius: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 14px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(100, 116, 139, 0.1);
+  }
+
+  &__baner {
+    padding: 13px 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-gap: 7px;
+    background-color: rgba(var(--bg-w),1.0);
+    position: relative;
+    background-position: right center;
+    background-repeat: no-repeat;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: absolute;
+      content: '';
+      filter: blur(57px);
+      top: 50%;
+      transform: translate(50%, -50%);
+      right: 0;
+    }
+
+    &.blue-bg {
+      background-image: url(../img/mining-baner.png);
+
+      &::before {
+        background-color: rgba(var(--bg-e),1.0);
+      }
+    }
+    &.yellow-bg {
+      background-image: url(../img/mining-baner2.png);
+
+      &::before {
+        background-color: rgba(var(--cl-q),1.0);
+      }
+    }
+
+    &-name {
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 100%;
+      color: rgba(var(--cl-f),1.0);
+    }
+
+    &-value {
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: auto;
+      color: rgba(var(--cl-a),1.0);
+
+      &.lvl {
+        font-size: 28px;
+      }
+    }
+
+    i {
+      font-style: normal;
+      color: rgba(var(--cl-f),1.0);
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+}

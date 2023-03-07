@@ -26,6 +26,22 @@
 @import "components/news-item.scss";
 @import "components/faq-item.scss";
 @import "components/roadmap-list.scss";
+@import "components/mining-aside.scss";
+@import "components/mining-top.scss";
+@import "components/mining-slider.scss";
+@import "components/mining-vidgets.scss";
+@import "components/mining-filters.scss";
+@import "components/searh-form.scss";
+@import "components/mining-convert.scss";
+@import "components/mining-profit.scss";
+@import "components/profit-box.scss";
+@import "components/mining-box.scss";
+@import "components/exchange-form.scss";
+@import "components/withdrawal-list.scss";
+@import "components/withdrawal-table.scss";
+@import "components/program-box.scss";
+@import "components/copy-form.scss";
+@import "components/mining-card.scss";
 
 // ----------------- BLOCK COMPONENTS -----------------
 
@@ -33,5 +49,6 @@
 
 
 // ----------------- GRID COMPONENTS -----------------
-
+@import "components/card-list.scss";
+@import "components/mining-grid.scss";
 // ----------------- GRID COMPONENTS -----------------

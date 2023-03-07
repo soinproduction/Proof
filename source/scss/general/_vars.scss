@@ -15,7 +15,8 @@
 
 // --------------- default JS variable ---------------
   --header-height: 62px;
-
+  --aside-width: 240px;
+  --default-size: 54px;
   --size: Min(24vw, 264px);
 // --------------- default JS tablet variable ---------------
   // @media (max-width: 1024px) {
@@ -63,6 +64,12 @@
   --cl-p: #{HexToRGB(#25344A)}; // rgba(var(--cl-p),1.0);
   --cl-q: #{HexToRGB(#ecbe08)}; // rgba(var(--cl-q),1.0);
   --cl-r: #{HexToRGB(#0B1122)}; // rgba(var(--cl-r),1.0);
+  --cl-s: #{HexToRGB(#263B57)}; // rgba(var(--cl-s),1.0);
+  --cl-t: #{HexToRGB(#1E2531)}; // rgba(var(--cl-t),1.0);
+  --cl-u: #{HexToRGB(#FF4A1A)}; // rgba(var(--cl-u),1.0);
+  --cl-v: #{HexToRGB(#17213A)}; // rgba(var(--cl-v),1.0);
+  --cl-w: #{HexToRGB(#0B101E)}; // rgba(var(--cl-w),1.0);
+  --cl-x: #{HexToRGB(#131B31)}; // rgba(var(--cl-x),1.0);
 
 
 // --------------- default background cl variable ---------------
@@ -81,6 +88,12 @@
   --bg-p: #{HexToRGB(#25344A)}; // rgba(var(--bg-p),1.0);
   --bg-q: #{HexToRGB(#ecbe08)}; // rgba(var(--bg-q),1.0);
   --bg-r: #{HexToRGB(#0B1122)}; // rgba(var(--bg-r),1.0);
+  --bg-s: #{HexToRGB(#263B57)}; // rgba(var(--bg-s),1.0);
+  --bg-t: #{HexToRGB(#1E2531)}; // rgba(var(--bg-t),1.0);
+  --bg-u: #{HexToRGB(#FF4A1A)}; // rgba(var(--bg-u),1.0);
+  --bg-v: #{HexToRGB(#17213A)}; // rgba(var(--bg-v),1.0);
+  --bg-w: #{HexToRGB(#0B101E)}; // rgba(var(--bg-w),1.0);
+  --bg-x: #{HexToRGB(#131B31)}; // rgba(var(--bg-x),1.0);
 
 
 
@@ -90,9 +103,10 @@
   --br-c: #D72F33; // var(--br-c);
   --br-d: #1E6FF6; // var(--br-d);
   --br-e: #ECBF08; // var(--br-e);
+  --br-f: #1B2741; // var(--br-f);
+  --br-g: #262D3D; // var(--br-g);
+  --br-h: #161F35; // var(--br-h);
 
-  --br-f: #546DB3; // var(--br-f);
-  --br-g: #66F6A8; // var(--br-g);
 
 
 // --------------- gradient background cl variable ---------------
@@ -106,6 +120,7 @@
 
   --gradient-f: linear-gradient(90deg, rgba(255, 226, 42, 0.9) -16.15%, rgba(224, 20, 46, 0.9) 103.08%);
   --gradient-g: linear-gradient(280.84deg, #161F35 -2.98%, #273B6C 102.72%);
+  --gradient-h: linear-gradient(90deg, #509D30 0%, #9CDB82 89.23%);
 
 
 

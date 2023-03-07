@@ -1,0 +1,46 @@
+.searh-form {
+  --size-ident: 20px;
+
+  &__label {
+    max-width: 226px;
+    height: 44px;
+    width: 100%;
+    display: flex;
+    position: relative;
+
+    background: rgba(var(--bg-g),1.0);
+    border-radius: 12px;
+
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(var(--cl-f),1.0);
+  }
+
+  &__input {
+    display: flex;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: inherit;
+    text-indent: var(--size-ident);
+    padding-right: calc(var(--size-ident) + 30px);
+  }
+
+  &__btn {
+    position: absolute;
+    color: inherit;
+    top: 50%;
+    transform: translateY(-50%);
+    right: var(--size-ident);
+
+    svg {
+      fill: transparent;
+      stroke: currentColor;
+    }
+  }
+
+}

@@ -7,3 +7,67 @@
     transform: translateY(-100%);
   }
 }
+
+@keyframes top-bottom {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+
+@keyframes pulse-arrow {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 150%;
+  }
+}
+
+@keyframes stras-bg {
+  0% {
+    background-position: 250% 250%;
+  }
+
+  100% {
+    background-position: -250% -250%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background: rgba(30, 111, 246, 0.4);
+  }
+
+  25% {
+    background: rgba(219, 56, 78, 0.4);
+  }
+
+  50% {
+    background: rgba(36, 226, 76, 0.4);
+  }
+
+  75% {
+    background: rgba(108, 54, 227, 0.4);
+  }
+
+  100% {
+    background: rgba(30, 111, 246, 0.4);
+  }
+}
+
+@keyframes show-block {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(calc(var(--header-height) + 5px));
+  }
+}
+

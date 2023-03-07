@@ -1,0 +1,3009 @@
+<!DOCTYPE html>
+<html lang="En-en">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header-mining.html')
+
+  <main>
+    <div class="mining-app">
+      <div class="container container--mode">
+        <div class="mining-app__inner mining-grid" data-tabs-parrent>
+          <aside class="mining-aside">
+            <nav class="mining-aside__nav">
+              <ul class="mining-aside__list">
+                <li class="mining-aside__item">
+                  <a href="#" class="mining-aside__link active" data-tab="1">
+                    Mining
+                    <i class="mining-aside__icon">
+                      <svg width='18' height='18'>
+                        <use href='img/sprite/sprite.svg#aside-nav'></use>
+                      </svg>
+                    </i>
+                  </a>
+                </li>
+                <li class="mining-aside__item">
+                  <a href="#" class="mining-aside__link" data-tab="2">
+                    Buy/Sell GH/s
+                    <i class="mining-aside__icon">
+                      <svg width='18' height='18'>
+                        <use href='img/sprite/sprite.svg#aside-nav2'></use>
+                      </svg>
+                    </i>
+                  </a>
+                </li>
+                <li class="mining-aside__item">
+                  <a href="#" class="mining-aside__link" data-tab="5">
+                    Sell GH/s
+                    <i class="mining-aside__icon">
+                      <svg width='18' height='18'>
+                        <use href='img/sprite/sprite.svg#aside-nav5'></use>
+                      </svg>
+                    </i>
+                  </a>
+                </li>
+                <li class="mining-aside__item">
+                  <a href="#" class="mining-aside__link" data-tab="3">
+                    Withdraw
+                    <i class="mining-aside__icon">
+                      <svg width='18' height='18'>
+                        <use href='img/sprite/sprite.svg#aside-nav3'></use>
+                      </svg>
+                    </i>
+                  </a>
+                </li>
+                <li class="mining-aside__item">
+                  <a href="#" class="mining-aside__link" data-tab="4">
+                    Affiliate Program
+                    <i class="mining-aside__icon">
+                      <svg width='18' height='18'>
+                        <use href='img/sprite/sprite.svg#aside-nav4'></use>
+                      </svg>
+                    </i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+
+          <div class="mining-app__section active" data-tab-content="1">
+            <section class="mining-section">
+              <div class="mining-top">
+                <div class="mining-top__content">
+                  <h2 class="mining-top__title">
+                    Mining
+                  </h2>
+                  <p>
+                    Choose the desired currency for mining, specify the percentage ratio for each currency. The earnings are credited in real-time! You can request a withdrawal once you reach the minimum withdrawal amount.
+                  </p>
+                </div>
+                <div class="mining-slider">
+                    <div class='swiper-box'>
+                      <div class='mining-slider__init swiper-container'>
+                        <ul class='swiper-wrapper'>
+                          <li class='swiper-slide'>
+                            <div class="minig-slide" style="background-image: url(img/mining-slide/bg.svg);">
+                              <div class="minig-slide__image">
+                                <img width="116" height="81" src="img/mining-slide/img.svg" alt="image">
+                              </div>
+
+                              <button class="minig-slide__btn">
+                                Start Mining
+                              </button>
+                            </div>
+                          </li>
+                          <li class='swiper-slide'>
+                            <div class="minig-slide minig-slide--mode" style="background-image: url(img/mining-slide/bg2.svg);">
+                              <div class="minig-slide__image">
+                                <img width="116" height="81" src="img/mining-slide/img2.svg" alt="image">
+                              </div>
+
+                              <button class="minig-slide__btn">
+                                Start Mining
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="mining-section__inner">
+                <div class="mining-vidgets">
+                  <ul class="mining-vidgets__list">
+                    <li class="mining-vidgets__item">
+                      <div class="mining-vidget green">
+                        <div class="mining-vidget__content">
+                          <h4 class="mining-vidget__title">
+                            2 000 393
+                            <span class="mining-vidget__value">
+                              GH/s
+                            </span>
+                          </h4>
+                          <p class="mining-vidget__descr">
+                            GPU balance
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mining-vidgets__item">
+                      <div class="mining-vidget blue">
+                        <div class="mining-vidget__content">
+                          <h4 class="mining-vidget__title">
+                            100,00
+                            <span class="mining-vidget__value">
+                              %
+                            </span>
+                          </h4>
+                          <p class="mining-vidget__descr">
+                            Capacities used
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mining-vidgets__item">
+                      <div class="mining-vidget red">
+                        <div class="mining-vidget__content">
+                          <h4 class="mining-vidget__title">
+                            0
+                            <span class="mining-vidget__value">
+                              %
+                            </span>
+                          </h4>
+                          <p class="mining-vidget__descr">
+                            Capacity available
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mining-filters">
+                  <span class="mining-filters__label">
+                    <i class="mining-filters__icon">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#filter'></use>
+                      </svg>
+                    </i>
+                    Filter
+                  </span>
+
+                  <div class="mining-filters__inner">
+                    <div class="mining-filters__buttons">
+                      <button class="mining-filters__button active">
+                        Inactive
+                      </button>
+                      <button class="mining-filters__button">
+                        Active
+                      </button>
+                    </div>
+                    <form action="#" class="searh-form">
+                      <label for="searh" class="searh-form__label">
+                        <input type="text" class="searh-form__input" name="searh" placeholder="Search Coins">
+                        <button class="searh-form__btn">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#search'></use>
+                          </svg>
+                        </button>
+                      </label>
+                    </form>
+                  </div>
+                </div>
+
+                <ul class="card-list">
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="BITCOIN">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 7.99501px 7.99501px rgba(247, 147, 26, 0.3);">
+                          <img width="34" height="34" src="img/coin/icon.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Bitcoin (BTC)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>BTC</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="LTC">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="filter: drop-shadow(0px 8px 8px rgba(190, 190, 190, 0.3))">
+                          <img width="34" height="34" src="img/coin/icon2.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Litecoin (LTC)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>LTC</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="TRX">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 7.99501px 7.99501px rgba(252, 7, 12, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon3.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Tron (TRX)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>TRX</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="DOGE">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(194, 166, 51, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon4.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Dogecoin (DOGE)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>DOGE</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="DASH">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(0, 141, 231, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon5.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Dash (DASH)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>DASH</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="BCH">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(141, 195, 81, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon6.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Bitcoin Cash (BCH)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>BCH</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="XLM">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon7.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Stellar (XLM)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>XLM</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="ZEC">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon8.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Zcash (ZEC)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>ZEC</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="XRP">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon9.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Ripple (XRP)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>XRP</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="ETH">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 7.99501px 7.99501px rgba(52, 52, 52, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon10.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Ethereum (ETH)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>ETH</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="ETC">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(50, 131, 50, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon11.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Ethereum Classic (ETC)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>ETC</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="MATIC">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(43, 109, 239, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon12.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Polygon (MATIC)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>MATIC</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="ADA">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(13, 30, 48, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon13.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Cardano (ADA)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>ADA</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="BNB">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(243, 186, 47, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon14.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Binance Coin (BNB)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>BNB</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                   <li class="card-list__item">
+                    <div class="mining-card" data-name="SOL">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="filter: drop-shadow(0px 8px 8px rgba(48, 211, 190, 0.3))">
+                          <img width="34" height="34" src="img/coin/icon15.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Solana (SOL)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>SOL</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="DOT">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(230, 0, 122, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon16.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Polkadot (DOT)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>DOT</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="SHIB">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="filter: drop-shadow(0px 8px 8px rgba(237, 65, 41, 0.3))">
+                          <img width="34" height="34" src="img/coin/icon17.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Shiba Inu (SHIB)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>SHIB</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="DAI">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(244, 183, 49, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon18.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Dai (DAI)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>DAI</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="AVAX">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="filter: drop-shadow(0px 8px 8px rgba(232, 65, 66, 0.3))">
+                          <img width="34" height="34" src="img/coin/icon19.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Avalanche (AVAX)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>AVAX</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="UNI">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(255, 0, 122, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon20.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Uniswap (UNI)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>UNI</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="ATOM">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(46, 49, 72, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon21.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Cosmos (ATOM)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>ATOM</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="XMR">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(255, 102, 0, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon22.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Monero (XMR)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>XMR</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="LINK">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="box-shadow: 0px 8px 8px rgba(42, 90, 218, 0.3)">
+                          <img width="34" height="34" src="img/coin/icon23.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Chainlink (LINK)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>LINK</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="LEO">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="filter: drop-shadow(0px 8px 8px rgba(248, 218, 47, 0.3))">
+                          <img width="34" height="34" src="img/coin/icon24.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            UNUS SED LEO (LEO)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>LEO</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="TON">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="filter: drop-shadow(0px 8px 8px rgba(0, 136, 204, 0.3))">
+                          <img width="34" height="34" src="img/coin/icon25.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Toncoin (TON)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>TON</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="APE">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="filter: drop-shadow(0px 8px 8px rgba(5, 57, 161, 0.3))">
+                          <img width="34" height="34" src="img/coin/icon26.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            ApeCoin (APE)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>APE</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="CRO">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="filter: drop-shadow(0px 8px 8px rgba(0, 32, 70, 0.3))">
+                          <img width="34" height="34" src="img/coin/icon27.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Cronos (CRO)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>CRO</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="APT">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.3))">
+                          <img width="34" height="34" src="img/coin/icon28.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Aptos (APT)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>APT</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="card-list__item">
+                    <div class="mining-card" data-name="LDO">
+                      <div class="mining-card__top">
+                        <div class="mining-card__coin" style="filter: drop-shadow(0px 8px 8px rgba(246, 153, 136, 0.3))">
+                          <img width="34" height="34" src="img/coin/icon29.svg" alt="coin">
+                        </div>
+                        <div class="mining-card__top-inner">
+                          <span class="mining-card__top-name">
+                            Lido DAO (LDO)
+                          </span>
+                          <span class="mining-card__top-descr">
+                            Earn with ProofStaking!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mining-card__body">
+                        <div class="mining-card__rait">
+                          <span class="mining-card__rait-value">0%</span>
+                          <span class="mining-card__rait-descr">GPU used</span>
+                        </div>
+                        <span class="mining-card__icon"></span>
+                      </div>
+                      <div class="mining-card__buttons">
+                        <button class="mining-card__button mining-card__minus">
+                          -
+                        </button>
+                        <button class="mining-card__button mining-card__plus">
+                          +
+                        </button>
+                      </div>
+                      <div class="mining-card__result">
+                        <span class="mining-card__result-value">
+                          0.000000000000 <i>LDO</i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
+            </section>
+          </div>
+          <div class="mining-app__section" data-tab-content="2">
+            <section class="mining-section">
+              <div class="mining-top">
+                <div class="mining-top__content">
+                  <h2 class="mining-top__title">
+                    Buy GH/s
+                  </h2>
+                  <p>
+                    To buy GH/s, enter the amount of TRX you are willing to exchange for GH/s, and then confirm your action. GH/s will be automatically credited to your balance.
+                  </p>
+                </div>
+                <div class="mining-slider">
+                    <div class='swiper-box'>
+                      <div class='mining-slider__init swiper-container'>
+                        <ul class='swiper-wrapper'>
+                          <li class='swiper-slide'>
+                            <div class="minig-slide" style="background-image: url(img/mining-slide/bg.svg);">
+                              <div class="minig-slide__image">
+                                <img width="116" height="81" src="img/mining-slide/img.svg" alt="image">
+                              </div>
+
+                              <button class="minig-slide__btn">
+                                Start Mining
+                              </button>
+                            </div>
+                          </li>
+                          <li class='swiper-slide'>
+                            <div class="minig-slide minig-slide--mode" style="background-image: url(img/mining-slide/bg2.svg);">
+                              <div class="minig-slide__image">
+                                <img width="116" height="81" src="img/mining-slide/img2.svg" alt="image">
+                              </div>
+
+                              <button class="minig-slide__btn">
+                                Start Mining
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="mining-section__wrapper">
+                <form action="#" class="mining-convert">
+                  <div class="mining-convert__inner">
+                    <div class="mining-convert__row">
+                      <div class="mining-convert__coll">
+                        <span class="mining-convert__name">
+                          You give:
+                        </span>
+                        <div class="mining-convert__coin red-shadow">
+                          <img width='33' height='33' src="img/sprite/tron.svg" alt="icon">
+                          TRX
+                        </div>
+                        <span class="mining-convert__name">
+                          TRON
+                        </span>
+                      </div>
+                      <div class="mining-convert__coll">
+                        <span class="mining-convert__name">
+                          Amount:
+                        </span>
+                        <input type="number" value="2000" class="mining-convert__input">
+                        <span class="mining-convert__name">
+                          Enter an amount
+                        </span>
+                      </div>
+                    </div>
+                    <div class="mining-convert__row">
+                      <div class="mining-convert__coll">
+                        <span class="mining-convert__name">
+                          You get:
+                        </span>
+                        <div class="mining-convert__coin blue-shadow">
+                          <img width='33' height='33' src="img/sprite/bitcoin.svg" alt="icon">
+                          GH/s
+                        </div>
+                        <span class="mining-convert__name">
+                          GH/s
+                        </span>
+                      </div>
+                      <div class="mining-convert__coll">
+                        <span class="mining-convert__name">
+                          Amount:
+                        </span>
+                        <input type="number" value="2000" class="mining-convert__input">
+                        <span class="mining-convert__name">
+                          After purchase
+                        </span>
+                      </div>
+                    </div>
+
+                    <button class="mining-convert__swap convert-btn">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#arrow-swap'></use>
+                      </svg>
+                    </button>
+
+                  </div>
+
+                  <button class="mining-convert__button blue-btn">
+                    Buy GH/s
+                  </button>
+
+                </form>
+
+                <div class="mining-profit">
+                  <div class="mining-profit__top">
+                    <div class="mining-profit__baner blue-bg">
+                      <span class="mining-profit__baner-name">
+                        All bought:
+                      </span>
+                      <span class="mining-profit__baner-value">
+                        2000 <i>GH/s</i>
+                      </span>
+                    </div>
+                    <div class="mining-profit__baner yellow-bg">
+                      <span class="mining-profit__baner-name">
+                        Level mining:
+                      </span>
+                      <span class="mining-profit__baner-value lvl">
+                        2 <i>lvl</i>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="profit-box">
+                    <span class="profit-box__title">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#coin'></use>
+                      </svg>
+                      Your Profit
+                    </span>
+
+                    <ul class="profit-box__list">
+                      <li class="profit-box__item">
+                        <span class="profit-box__name">
+                          Per hour:
+                        </span>
+                        <span class="profit-box__value">
+                          0.5<i>%</i>
+                        </span>
+                      </li>
+                      <li class="profit-box__item">
+                        <span class="profit-box__name">
+                          Per Day:
+                        </span>
+                        <span class="profit-box__value">
+                          0.5<i>%</i>
+                        </span>
+                      </li>
+                      <li class="profit-box__item">
+                        <span class="profit-box__name">
+                          Per in 7 days:
+                        </span>
+                        <span class="profit-box__value">
+                          0.5<i>%</i>
+                        </span>
+                      </li>
+                      <li class="profit-box__item">
+                        <span class="profit-box__name">
+                          Per Month:
+                        </span>
+                        <span class="profit-box__value">
+                          0.5<i>%</i>
+                        </span>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="mining-box four-collumns">
+                <span class="mining-box__title">
+                  Recent Transactions
+                </span>
+
+                <div class="mining-box__table">
+                  <div class="mining-box__head">
+                    <span class="mining-box__head-name">
+                      Amount
+                    </span>
+                    <span class="mining-box__head-name">
+                      Type
+                    </span>
+                    <span class="mining-box__head-name">
+                      User
+                    </span>
+                    <span class="mining-box__head-name">
+                      Time
+                    </span>
+                  </div>
+
+                  <ul class="mining-box__list">
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin blue-shadow">
+                          <img width='24' height='24' src="img/sprite/bitcoin.svg" alt="icon">
+                        </div>
+                        <span>
+                          2500.00 GH/s
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#trend-up'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Buy
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin blue-shadow">
+                          <img width='24' height='24' src="img/sprite/bitcoin.svg" alt="icon">
+                        </div>
+                        <span>
+                          2500.00 GH/s
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#trend-down'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Sell
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon2.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin blue-shadow">
+                          <img width='24' height='24' src="img/sprite/bitcoin.svg" alt="icon">
+                        </div>
+                        <span>
+                          2500.00 GH/s
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#trend-up'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Buy
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin blue-shadow">
+                          <img width='24' height='24' src="img/sprite/bitcoin.svg" alt="icon">
+                        </div>
+                        <span>
+                          2500.00 GH/s
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#trend-down'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Sell
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon2.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin blue-shadow">
+                          <img width='24' height='24' src="img/sprite/bitcoin.svg" alt="icon">
+                        </div>
+                        <span>
+                          2500.00 GH/s
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#trend-down'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Sell
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon2.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+
+                </div>
+
+              </div>
+
+            </section>
+          </div>
+          <div class="mining-app__section" data-tab-content="5">
+            <section class="mining-section">
+              <div class="mining-top">
+                <div class="mining-top__content">
+                  <h2 class="mining-top__title">
+                    Sell GH/s
+                  </h2>
+                  <p>
+                    To sell GH/s, you need to click "Sell" and a confirmation form will appear. When you sell GH/s, you automatically sell all of your GH/s at once, not piecemeal.
+                  </p>
+                </div>
+                <div class="mining-slider">
+                    <div class='swiper-box'>
+                      <div class='mining-slider__init swiper-container'>
+                        <ul class='swiper-wrapper'>
+                          <li class='swiper-slide'>
+                            <div class="minig-slide" style="background-image: url(img/mining-slide/bg.svg);">
+                              <div class="minig-slide__image">
+                                <img width="116" height="81" src="img/mining-slide/img.svg" alt="image">
+                              </div>
+
+                              <button class="minig-slide__btn">
+                                Start Mining
+                              </button>
+                            </div>
+                          </li>
+                          <li class='swiper-slide'>
+                            <div class="minig-slide minig-slide--mode" style="background-image: url(img/mining-slide/bg2.svg);">
+                              <div class="minig-slide__image">
+                                <img width="116" height="81" src="img/mining-slide/img2.svg" alt="image">
+                              </div>
+
+                              <button class="minig-slide__btn">
+                                Start Mining
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="mining-section__wrapper">
+                <form action="#" class="mining-convert">
+                  <div class="mining-convert__inner">
+                    <div class="mining-convert__row">
+                      <div class="mining-convert__coll">
+                        <span class="mining-convert__name">
+                          You give:
+                        </span>
+                        <div class="mining-convert__coin red-shadow">
+                          <img width='33' height='33' src="img/sprite/tron.svg" alt="icon">
+                          TRX
+                        </div>
+                        <span class="mining-convert__name">
+                          TRON
+                        </span>
+                      </div>
+                      <div class="mining-convert__coll">
+                        <span class="mining-convert__name">
+                          Amount:
+                        </span>
+                        <input type="number" value="2000" class="mining-convert__input">
+                        <span class="mining-convert__name">
+                          Enter an amount
+                        </span>
+                      </div>
+                    </div>
+                    <div class="mining-convert__row">
+                      <div class="mining-convert__coll">
+                        <span class="mining-convert__name">
+                          You get:
+                        </span>
+                        <div class="mining-convert__coin blue-shadow">
+                          <img width='33' height='33' src="img/sprite/bitcoin.svg" alt="icon">
+                          GH/s
+                        </div>
+                        <span class="mining-convert__name">
+                          GH/s
+                        </span>
+                      </div>
+                      <div class="mining-convert__coll">
+                        <span class="mining-convert__name">
+                          Amount:
+                        </span>
+                        <input type="number" value="2000" class="mining-convert__input">
+                        <span class="mining-convert__name">
+                          After purchase
+                        </span>
+                      </div>
+                    </div>
+
+                    <button class="mining-convert__swap convert-btn">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#arrow-swap'></use>
+                      </svg>
+                    </button>
+
+                  </div>
+
+                  <button class="mining-convert__button blue-btn">
+                    Buy GH/s
+                  </button>
+
+                </form>
+
+                <div class="mining-profit">
+                  <div class="mining-profit__top">
+                    <div class="mining-profit__baner blue-bg">
+                      <span class="mining-profit__baner-name">
+                        All bought:
+                      </span>
+                      <span class="mining-profit__baner-value">
+                        2000 <i>GH/s</i>
+                      </span>
+                    </div>
+                    <div class="mining-profit__baner yellow-bg">
+                      <span class="mining-profit__baner-name">
+                        Level mining:
+                      </span>
+                      <span class="mining-profit__baner-value lvl">
+                        2 <i>lvl</i>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="profit-box">
+                    <span class="profit-box__title">
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#coin'></use>
+                      </svg>
+                      Your Profit
+                    </span>
+
+                    <ul class="profit-box__list">
+                      <li class="profit-box__item">
+                        <span class="profit-box__name">
+                          Per hour:
+                        </span>
+                        <span class="profit-box__value">
+                          0.5<i>%</i>
+                        </span>
+                      </li>
+                      <li class="profit-box__item">
+                        <span class="profit-box__name">
+                          Per Day:
+                        </span>
+                        <span class="profit-box__value">
+                          0.5<i>%</i>
+                        </span>
+                      </li>
+                      <li class="profit-box__item">
+                        <span class="profit-box__name">
+                          Per in 7 days:
+                        </span>
+                        <span class="profit-box__value">
+                          0.5<i>%</i>
+                        </span>
+                      </li>
+                      <li class="profit-box__item">
+                        <span class="profit-box__name">
+                          Per Month:
+                        </span>
+                        <span class="profit-box__value">
+                          0.5<i>%</i>
+                        </span>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="mining-box four-collumns">
+                <span class="mining-box__title">
+                  Recent Transactions
+                </span>
+
+                <div class="mining-box__table">
+                  <div class="mining-box__head">
+                    <span class="mining-box__head-name">
+                      Amount
+                    </span>
+                    <span class="mining-box__head-name">
+                      Type
+                    </span>
+                    <span class="mining-box__head-name">
+                      User
+                    </span>
+                    <span class="mining-box__head-name">
+                      Time
+                    </span>
+                  </div>
+
+                  <ul class="mining-box__list">
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin blue-shadow">
+                          <img width='24' height='24' src="img/sprite/bitcoin.svg" alt="icon">
+                        </div>
+                        <span>
+                          2500.00 GH/s
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#trend-up'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Buy
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin blue-shadow">
+                          <img width='24' height='24' src="img/sprite/bitcoin.svg" alt="icon">
+                        </div>
+                        <span>
+                          2500.00 GH/s
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#trend-down'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Sell
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon2.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin blue-shadow">
+                          <img width='24' height='24' src="img/sprite/bitcoin.svg" alt="icon">
+                        </div>
+                        <span>
+                          2500.00 GH/s
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#trend-up'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Buy
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin blue-shadow">
+                          <img width='24' height='24' src="img/sprite/bitcoin.svg" alt="icon">
+                        </div>
+                        <span>
+                          2500.00 GH/s
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#trend-down'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Sell
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon2.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin blue-shadow">
+                          <img width='24' height='24' src="img/sprite/bitcoin.svg" alt="icon">
+                        </div>
+                        <span>
+                          2500.00 GH/s
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#trend-down'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Sell
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon2.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+
+                </div>
+
+              </div>
+
+            </section>
+          </div>
+          <div class="mining-app__section" data-tab-content="3">
+            <section class="mining-section">
+              <div class="mining-top">
+                <div class="mining-top__content">
+                  <h2 class="mining-top__title">
+                    Withdraw
+                  </h2>
+                  <p>
+                    Here you can request the withdrawal of earnings. To do this, you need to select the currency, click "Withdraw", enter your wallet and confirm your actions.
+                  </p>
+                </div>
+                <div class="mining-slider">
+                    <div class='swiper-box'>
+                      <div class='mining-slider__init swiper-container'>
+                        <ul class='swiper-wrapper'>
+                          <li class='swiper-slide'>
+                            <div class="minig-slide" style="background-image: url(img/mining-slide/bg.svg);">
+                              <div class="minig-slide__image">
+                                <img width="116" height="81" src="img/mining-slide/img.svg" alt="image">
+                              </div>
+
+                              <button class="minig-slide__btn">
+                                Start Mining
+                              </button>
+                            </div>
+                          </li>
+                          <li class='swiper-slide'>
+                            <div class="minig-slide minig-slide--mode" style="background-image: url(img/mining-slide/bg2.svg);">
+                              <div class="minig-slide__image">
+                                <img width="116" height="81" src="img/mining-slide/img2.svg" alt="image">
+                              </div>
+
+                              <button class="minig-slide__btn">
+                                Start Mining
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="mining-box">
+                <span class="mining-box__title">
+                  Exchange
+                </span>
+
+                <form action="#" class="exchange-form">
+                  <div class="exchange-form__item">
+                    <span class="exchange-form__name">
+                      You give:
+                    </span>
+                    <label for="currency" class="exchange-form__label">
+                      <div class="select" data-select>
+                        <div class="select__header">
+                          <input type="hidden" class="select__input" name="currency" value="1">
+                          <span class="select__current" data-id="1">
+                            <svg>
+                              <use href="img/sprite/sprite.svg#tron-icon"></use>
+                            </svg>
+                            2000 <i>trx</i>
+                          </span>
+                          <svg width="16" height="16" >
+                            <use href="img/sprite/sprite.svg#arrow-down"></use>
+                          </svg>
+                        </div>
+                        <div class="select__body" style="height: 0px;">
+                          <ul class="select__list">
+                            <li class="select__option" data-id="1" data-choice="option" style="display: none;">
+                              <svg width="18" height="18" >
+                                <use href="img/sprite/sprite.svg#tron-icon"></use>
+                              </svg>
+                              2000 <i>trx</i>
+                            </li>
+                            <li class="select__option" data-id="2" data-choice="option" >
+                              <svg width="18" height="18" >
+                                <use href="img/sprite/sprite.svg#select-icon"></use>
+                              </svg>
+                              2000 <i>trx</i>
+                            </li>
+                            <li class="select__option" data-id="3" data-choice="option" >
+                              <svg width="18" height="18" >
+                                <use href="img/sprite/sprite.svg#select-icon2"></use>
+                              </svg>
+                              2000 <i>trx</i>
+                            </li>
+                            <li class="select__option" data-id="4" data-choice="option" >
+                              <svg width="18" height="18" >
+                                <use href="img/sprite/sprite.svg#select-icon3"></use>
+                              </svg>
+                              2000 <i>trx</i>
+                            </li>
+                            <li class="select__option" data-id="5" data-choice="option" >
+                              <svg width="18" height="18" >
+                                <use href="img/sprite/sprite.svg#select-icon4"></use>
+                              </svg>
+                              2000 <i>trx</i>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="exchange-form__item">
+                    <span class="exchange-form__name">
+                      You get:
+                    </span>
+                    <label for="You_get" class="exchange-form__label">
+                      <input type="text" name="You_get" class="exchange-form__input" value="2000" readonly>
+                      <span class="exchange-form__icon">
+                        <img width='24' height='24' src="img/sprite/bit.svg" alt="icon">
+                      </span>
+                    </label>
+                  </div>
+
+                  <button class="exchange-form__button blue-btn">
+                    Exchange
+                  </button>
+                </form>
+              </div>
+
+              <div class="mining-box">
+                <span class="mining-box__title">
+                  Withdrawal of funds
+                </span>
+
+                <ul class="withdrawal-list">
+                  <li class="withdrawal-list__item">
+                    <div class="withdrawal-list__top">
+                      <div class="withdrawal-list__icon">
+                        <img width="46" height="46" src="img/withdrawal/withdrawal.svg" alt="icon">
+                      </div>
+                      <div class="withdrawal-list__content">
+                        <span class="withdrawal-list__count">
+                          01
+                        </span>
+                        <span class="withdrawal-list__name">
+                          Choose a Currency
+                        </span>
+                      </div>
+                    </div>
+                    <p>
+                      First select a currency from the list to top up your balance
+                    </p>
+                  </li>
+                  <li class="withdrawal-list__item">
+                    <div class="withdrawal-list__top">
+                      <div class="withdrawal-list__icon">
+                        <img width="46" height="46" src="img/withdrawal/withdrawal2.svg" alt="icon">
+                      </div>
+                      <div class="withdrawal-list__content">
+                        <span class="withdrawal-list__count">
+                          02
+                        </span>
+                        <span class="withdrawal-list__name">
+                          Enter a Wallet
+                        </span>
+                      </div>
+                    </div>
+                    <p>
+                      On the payment page, deposit the wallet that is generated
+                    </p>
+                  </li>
+                  <li class="withdrawal-list__item">
+                    <div class="withdrawal-list__top">
+                      <div class="withdrawal-list__icon">
+                        <img width="46" height="46" src="img/withdrawal/withdrawal3.svg" alt="icon">
+                      </div>
+                      <div class="withdrawal-list__content">
+                        <span class="withdrawal-list__count">
+                          03
+                        </span>
+                        <span class="withdrawal-list__name">
+                          Get the Money
+                        </span>
+                      </div>
+                    </div>
+                    <p>
+                      After confirmation on the network, the money will appear on your balance
+                    </p>
+                  </li>
+                </ul>
+
+                <div class="withdrawal-table">
+                  <div class="withdrawal-table__head">
+                    <span class="withdrawal-table__head-name">
+                      Name
+                    </span>
+                    <span class="withdrawal-table__head-name">
+                      Amount
+                    </span>
+                    <span class="withdrawal-table__head-name">
+                      Action
+                    </span>
+                  </div>
+
+                  <ul class="withdrawal-table__list">
+                    <li class="withdrawal-table__row">
+                      <div class="withdrawal-table__name">
+                        <span class="withdrawal-table__icon red-shadow">
+                          <svg width="32" height="32">
+                            <use href="img/sprite/sprite.svg#tron-icon"></use>
+                          </svg>
+                        </span>
+                        <div class="withdrawal-table__content">
+                          <span class="withdrawal-table__value">
+                              2000
+                            <i>TRX</i>
+                          </span>
+                          <span class="withdrawal-table__date">
+                            <i>
+                              Active
+                            </i>
+                            on 29 Jan 14:00
+                          </span>
+                        </div>
+                      </div>
+                      <div class="withdrawal-table__amount">
+                        <span class="withdrawal-table__value">
+                          2500.00 TRX
+                        </span>
+                        <span class="withdrawal-table__descr">
+                          Aviable to withdraw
+                        </span>
+                      </div>
+
+                      <button class="withdrawal-table__button blue-btn">
+                        Wthdrawal
+                      </button>
+
+                    </li>
+                    <li class="withdrawal-table__row">
+                      <div class="withdrawal-table__name">
+                        <span class="withdrawal-table__icon red-shadow">
+                          <svg width="32" height="32">
+                            <use href="img/sprite/sprite.svg#tron-icon"></use>
+                          </svg>
+                        </span>
+                        <div class="withdrawal-table__content">
+                          <span class="withdrawal-table__value">
+                              2000
+                            <i>TRX</i>
+                          </span>
+                          <span class="withdrawal-table__date">
+                            <i>
+                              Active
+                            </i>
+                            on 29 Jan 14:00
+                          </span>
+                        </div>
+                      </div>
+                      <div class="withdrawal-table__amount">
+                        <span class="withdrawal-table__value">
+                          2500.00 TRX
+                        </span>
+                        <span class="withdrawal-table__descr">
+                          Aviable to withdraw
+                        </span>
+                      </div>
+
+                      <button class="withdrawal-table__button blue-btn">
+                        Wthdrawal
+                      </button>
+
+                    </li>
+                    <li class="withdrawal-table__row">
+                      <div class="withdrawal-table__name">
+                        <span class="withdrawal-table__icon red-shadow">
+                          <svg width="32" height="32">
+                            <use href="img/sprite/sprite.svg#tron-icon"></use>
+                          </svg>
+                        </span>
+                        <div class="withdrawal-table__content">
+                          <span class="withdrawal-table__value">
+                              2000
+                            <i>TRX</i>
+                          </span>
+                          <span class="withdrawal-table__date">
+                            <i>
+                              Active
+                            </i>
+                            on 29 Jan 14:00
+                          </span>
+                        </div>
+                      </div>
+                      <div class="withdrawal-table__amount">
+                        <span class="withdrawal-table__value">
+                          2500.00 TRX
+                        </span>
+                        <span class="withdrawal-table__descr">
+                          Aviable to withdraw
+                        </span>
+                      </div>
+
+                      <button class="withdrawal-table__button blue-btn">
+                        Wthdrawal
+                      </button>
+
+                    </li>
+                    <li class="withdrawal-table__row">
+                      <div class="withdrawal-table__name">
+                        <span class="withdrawal-table__icon red-shadow">
+                          <svg width="32" height="32">
+                            <use href="img/sprite/sprite.svg#tron-icon"></use>
+                          </svg>
+                        </span>
+                        <div class="withdrawal-table__content">
+                          <span class="withdrawal-table__value">
+                              2000
+                            <i>TRX</i>
+                          </span>
+                          <span class="withdrawal-table__date">
+                            <i>
+                              Active
+                            </i>
+                            on 29 Jan 14:00
+                          </span>
+                        </div>
+                      </div>
+                      <div class="withdrawal-table__amount">
+                        <span class="withdrawal-table__value">
+                          2500.00 TRX
+                        </span>
+                        <span class="withdrawal-table__descr">
+                          Aviable to withdraw
+                        </span>
+                      </div>
+
+                      <button class="withdrawal-table__button blue-btn">
+                        Wthdrawal
+                      </button>
+
+                    </li>
+                    <li class="withdrawal-table__row">
+                      <div class="withdrawal-table__name">
+                        <span class="withdrawal-table__icon red-shadow">
+                          <svg width="32" height="32">
+                            <use href="img/sprite/sprite.svg#tron-icon"></use>
+                          </svg>
+                        </span>
+                        <div class="withdrawal-table__content">
+                          <span class="withdrawal-table__value">
+                              2000
+                            <i>TRX</i>
+                          </span>
+                          <span class="withdrawal-table__date">
+                            <i>
+                              Active
+                            </i>
+                            on 29 Jan 14:00
+                          </span>
+                        </div>
+                      </div>
+                      <div class="withdrawal-table__amount">
+                        <span class="withdrawal-table__value">
+                          2500.00 TRX
+                        </span>
+                        <span class="withdrawal-table__descr">
+                          Aviable to withdraw
+                        </span>
+                      </div>
+
+                      <button class="withdrawal-table__button blue-btn">
+                        Wthdrawal
+                      </button>
+
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="warn-block">
+                  <div class="warn-block__icon">
+                    <img width="40" height="37" src="img/warn.svg" alt="icon">
+                  </div>
+                  In case of any payment difficulties, please contact support and we will solve your problem
+                </div>
+
+
+              </div>
+
+
+              <div class="mining-box three-columns">
+                <span class="mining-box__title">
+                  History
+                </span>
+
+                <div class="mining-box__table">
+                  <div class="mining-box__head">
+                    <span class="mining-box__head-name">
+                      Amount
+                    </span>
+                    <span class="mining-box__head-name">
+                      Status
+                    </span>
+                    <span class="mining-box__head-name">
+                      Time
+                    </span>
+                  </div>
+
+                  <ul class="mining-box__list">
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin red-shadow">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#tron-icon"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          19 294,249
+                        </span>
+                      </div>
+                      <div class="mining-box__coll green-text">
+                        <div class="mining-box__coin">
+                          <svg width='28' height='28'>
+                            <use href='img/sprite/sprite.svg#complete'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Complete
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin red-shadow">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#tron-icon"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          19 294,249
+                        </span>
+                      </div>
+                      <div class="mining-box__coll red-text">
+                        <div class="mining-box__coin">
+                          <svg width='28' height='28'>
+                            <use href='img/sprite/sprite.svg#cancel'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Cancel
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin red-shadow">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#tron-icon"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          19 294,249
+                        </span>
+                      </div>
+                      <div class="mining-box__coll yellow-text">
+                        <div class="mining-box__coin">
+                          <svg width='28' height='28'>
+                            <use href='img/sprite/sprite.svg#progress'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          In progress
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin red-shadow">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#tron-icon"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          19 294,249
+                        </span>
+                      </div>
+                      <div class="mining-box__coll green-text">
+                        <div class="mining-box__coin">
+                          <svg width='28' height='28'>
+                            <use href='img/sprite/sprite.svg#complete'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Complete
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin red-shadow">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#tron-icon"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          19 294,249
+                        </span>
+                      </div>
+                      <div class="mining-box__coll green-text">
+                        <div class="mining-box__coin">
+                          <svg width='28' height='28'>
+                            <use href='img/sprite/sprite.svg#complete'></use>
+                          </svg>
+                        </div>
+                        <span>
+                          Complete
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+
+                </div>
+
+              </div>
+
+            </section>
+          </div>
+          <div class="mining-app__section" data-tab-content="4">
+            <section class="mining-section">
+              <div class="mining-top">
+                <div class="mining-top__content">
+                  <h2 class="mining-top__title">
+                    Affiliate Program
+                  </h2>
+                  <p>
+                    You will receive 10% of the withdrawal amount of your first-level referral, as well as 5% of the withdrawal amount of your second-level referral. The commission will be instantly credited in the currency that your referral chooses for withdrawal.
+                  </p>
+                </div>
+                <div class="mining-slider">
+                    <div class='swiper-box'>
+                      <div class='mining-slider__init swiper-container'>
+                        <ul class='swiper-wrapper'>
+                          <li class='swiper-slide'>
+                            <div class="minig-slide" style="background-image: url(img/mining-slide/bg.svg);">
+                              <div class="minig-slide__image">
+                                <img width="116" height="81" src="img/mining-slide/img.svg" alt="image">
+                              </div>
+
+                              <button class="minig-slide__btn">
+                                Start Mining
+                              </button>
+                            </div>
+                          </li>
+                          <li class='swiper-slide'>
+                            <div class="minig-slide minig-slide--mode" style="background-image: url(img/mining-slide/bg2.svg);">
+                              <div class="minig-slide__image">
+                                <img width="116" height="81" src="img/mining-slide/img2.svg" alt="image">
+                              </div>
+
+                              <button class="minig-slide__btn">
+                                Start Mining
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="program-box">
+                <ul class="program-list">
+                  <li class="program-list__item">
+                    <span class="program-box__name">
+                      Referral 1-st level:
+                    </span>
+                    <div class="program-list__content purpure-bg">
+
+                      <div class="program-list__image">
+                        <img width="132" height="159" src="img/sprite/point.svg" alt="point">
+                      </div>
+                      <div class="program-list__frame">
+                        <img width="129" height="93" src="img/icon.png" alt="icon">
+                      </div>
+
+
+                      <div class="program-list__row">
+                        <div class="program-list__count">
+                          <svg width='26' height='26'>
+                            <use href='img/sprite/sprite.svg#user-square'></use>
+                          </svg>
+                          <span>
+                            10
+                          </span>
+                        </div>
+                        <span class="program-list__name">
+                          Your referrals:
+                        </span>
+                      </div>
+                      <div class="program-list__row">
+                        <span class="program-list__name">
+                          You get:
+                        </span>
+                        <div class="program-list__get">
+                          <span class="program-list__value">
+                            <i class="program-list__value-descr">+2 GH/s and</i>
+                            <i>10%</i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="program-list__item">
+                    <span class="program-box__name">
+                      Referral 2-st level:
+                    </span>
+                    <div class="program-list__content red-bg">
+                      <div class="program-list__image">
+                        <img width="132" height="159" src="img/sprite/point.svg" alt="point">
+                      </div>
+                      <div class="program-list__frame">
+                        <img width="129" height="93" src="img/icon2.png" alt="icon">
+                      </div>
+                      <div class="program-list__row">
+                        <div class="program-list__count">
+                          <svg width='26' height='26'>
+                            <use href='img/sprite/sprite.svg#user-square'></use>
+                          </svg>
+                          <span>
+                            10
+                          </span>
+                        </div>
+                        <span class="program-list__name">
+                          Your referrals:
+                        </span>
+                      </div>
+                      <div class="program-list__row">
+                        <span class="program-list__name">
+                          You get:
+                        </span>
+                        <div class="program-list__get">
+                          <span class="program-list__value">
+                            <i>5%</i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="program-list__item ">
+                    <span class="program-box__name">
+                      Bonus in USD
+                    </span>
+                    <div class="program-list__content green-bg">
+                      <div class="program-list__image">
+                        <img width="132" height="159" src="img/sprite/dollar.svg" alt="point">
+                      </div>
+                      <div class="program-list__frame">
+                        <img width="129" height="93" src="img/icon3.png" alt="icon">
+                      </div>
+                      <div class="program-list__row">
+                        <span class="program-list__name">
+                          Bonus in USD:
+                        </span>
+                        <div class="program-list__count">
+                          <span>
+                            295.10
+                          </span>
+                        </div>
+                      </div>
+                      <div class="program-list__row">
+                        <span class="program-list__name">
+                          You get:
+                        </span>
+                        <div class="program-list__get">
+                          <span class="program-list__value">
+                            <i>5%</i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="program-box__row">
+                  <span class="program-box__name">
+                    Referral 1-st level:
+                  </span>
+                  <form action="#" class="copy-form buffer">
+                    <label for="#" class="copy-form__label">
+                      <input type="text" class="copy-form__input buffer__input" value="https://ProofStaking.pro/ref/0xb933950393ab8b">
+                      <button class="copy-form__btn buffer__button blue-btn">
+                        <svg width="24" height="24">
+                          <use href="img/sprite/sprite.svg#copy"></use>
+                        </svg>
+                        <span>Copy link</span>
+                      </button>
+                    </label>
+                    <a href="#" class="copy-form__link blue-btn">Promo tools</a>
+                  </form>
+                </div>
+              </div>
+
+
+              <div class="mining-box four-collumns--mode">
+                <span class="mining-box__title">
+                  History
+                </span>
+
+                <div class="mining-box__table">
+                  <div class="mining-box__head">
+                    <span class="mining-box__head-name">
+                      Time
+                    </span>
+                    <span class="mining-box__head-name">
+                      User
+                    </span>
+                    <span class="mining-box__head-name">
+                      Bonus
+                    </span>
+                    <span class="mining-box__head-name">
+                      Level
+                    </span>
+
+                  </div>
+                  <ul class="mining-box__list">
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon2.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#bonus"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          20 USD
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#level"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          1
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon2.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#bonus"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          20 USD
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#level"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          1
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon2.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#bonus"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          20 USD
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#level"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          1
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon2.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#bonus"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          20 USD
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#level"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          1
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon2.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#bonus"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          20 USD
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#level"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          1
+                        </span>
+                      </div>
+                    </li>
+                    <li class="mining-box__row">
+                      <div class="mining-box__coll">
+                        <span>
+                          19/08/2021 19:36:10
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <img width="24" height="24" src="img/user-icons/icon2.svg" alt="user">
+                        </div>
+                        <span>
+                          0xb93...3ab8b
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#bonus"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          20 USD
+                        </span>
+                      </div>
+                      <div class="mining-box__coll">
+                        <div class="mining-box__coin">
+                          <svg width="28" height="28">
+                            <use href="img/sprite/sprite.svg#level"></use>
+                          </svg>
+                        </div>
+                        <span>
+                          1
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+
+
+               <div class="mining-box">
+                <span class="mining-box__title">
+                  History
+                </span>
+
+                <div class="mining-box__none">
+
+                  <div class="mining-box__none-image">
+                    <picture>
+                      <source type='image/webp' srcset='img/none.webp'>
+                      <img loading='lazy' width='182' height='182' src='img/none.png' alt='image'>
+                    </picture>
+                  </div>
+
+                  <span class="mining-box__none-descr">
+                    Oooops ... there's nothing here!
+                  </span>
+
+                </div>
+
+              </div>
+
+            </section>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  @include('partials/footer-mining.html')
+  @include('partials/modals.html')
+</body>
+<script src="js/main.js"></script>
+
+</html>

@@ -1,0 +1,214 @@
+.mining-card {
+  width: 100%;
+  --padding-x: 26px;
+  padding: 24px var(--padding-x) 30px;
+  background: rgba(var(--cl-g),1.0);
+  border-radius: 12px;
+
+  &.active {
+
+
+    .mining-card__body::before {
+      animation-play-state: running;
+    }
+
+  }
+
+
+  &__icon {
+    width: 135px;
+    height: 107px;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    grid-gap: 14px;
+    padding-bottom: 37px;
+    position: relative;
+    margin-bottom: 16px;
+
+    &::before {
+      height: 17px;
+      left: calc(var(--padding-x) * -1);
+      right: calc(var(--padding-x) * -1);
+      position: absolute;
+      content: '';
+      background-color: rgba(var(--bg-x),1.0);
+      bottom: 0;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 3px;
+    }
+
+    &-name {
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 15px;
+      color: rgba(var(--cl-a),1.0);
+    }
+
+    &-descr {
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 12px;
+      color: rgba(var(--cl-f),1.0);
+    }
+  }
+
+  &__coin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 50%;
+  }
+
+  &__body {
+    border-radius: 24px;
+    min-height: 126px;
+    position: relative;
+    background: rgba(var(--bg-r),1.0);
+    overflow: hidden;
+    margin-bottom: 12px;
+
+    &::before {
+      pointer-events: none;
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background: rgba(30, 111, 246, 0.4);
+      filter: blur(87px);
+      transform: matrix(-0.86, -0.51, -0.51, 0.86, 0, 0);
+      animation: gradient 15s linear infinite;
+      animation-play-state: paused;
+    }
+  }
+
+  &__rait {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 4px;
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    top: -1px;
+    max-width: clamp(120px, 13vw, 143px);
+    width: 100%;
+    background: var(--card-bg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+
+    &-value {
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 29px;
+      line-height: 25px;
+      color: rgba(var(--cl-a),1.0);
+    }
+
+    &-descr {
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 12px;
+      color: rgba(var(--cl-f),1.0);
+    }
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 13px;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 100%;
+    color: rgba(var(--cl-a),1.0);
+    border-radius: 12px;
+    transition: background .4s;
+
+    &:hover {
+      background: rgba(var(--bg-e),1.0);
+    }
+  }
+
+  &__minus {
+    background: rgba(30, 111, 246, 0.04);
+  }
+
+  &__plus {
+    background: rgba(var(--bg-e),1.0);
+  }
+
+  &__result {
+    height: 55px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:  rgba(var(--bg-w),1.0);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      content: '';
+      background: rgba(30, 111, 246, 0.5);
+      filter: blur(87px);
+      z-index: -1;
+    }
+
+    &-value {
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 15px;
+      color: rgba(var(--cl-a),1.0);
+      text-transform: uppercase;
+
+      i {
+        font-style: normal;
+        color: rgba(var(--cl-f),1.0);
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+}

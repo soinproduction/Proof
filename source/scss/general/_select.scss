@@ -2,14 +2,23 @@
   position: relative;
   z-index: 1;
   user-select: none;
+  width: 100%;
 
-  --size: 54px;
+  i {
+    font-style: normal;
+    color: rgba(var(--cl-f),1.0);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 12px;
+    margin-left: -5px;
+  }
 
   &__header {
     width: 100%;
     max-width: 100%;
     cursor: pointer;
-    height: var(--size);
+    height: var(--default-size);
     background: rgba(var(--bg-n),1.0);
     border-radius: 12px;
     display: flex;
@@ -19,6 +28,7 @@
     z-index: 6;
 
     & > svg {
+      fill: transparent;
       stroke: rgba(var(--cl-d),1.0);
       transition: transform .4s linear;
     }
@@ -55,8 +65,15 @@
     overflow: hidden;
     border-radius: 10px;
     transition: height 0.2s ease-in;
-    padding-top: var(--size);
+    padding-top: var(--default-size);
     background: rgba(var(--bg-n),1.0);
+
+    i {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: inherit;
+      line-height: inherit;
+    }
   }
 
   &__list {

@@ -1,0 +1,17 @@
+.mining-app {
+  height: calc(100% - var(--header-height));
+  background-image: url(../img/mining-bg.png);
+  background-repeat: repeat-y;
+  background-position: right top;
+
+  &__inner {
+    // display: grid;
+    // grid-template-columns: var(--aside-width) 1fr;
+  }
+
+  &__section {
+    grid-column: 2;
+    // width: calc(100% + 15px);
+    padding: 40px 0px 40px 40px;
+  }
+}
