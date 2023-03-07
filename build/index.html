@@ -760,9 +760,9 @@
 
           </div>
           <div class="earn-section__coll">
-            <span class="earn-section__title earn-planets">
+            <button class="earn-section__title earn-planets" data-btn-modal="win">
               EarnPlanets
-            </span>
+            </button>
 
             <div class="game-box" id="game">
               <div class="game">
@@ -1310,19 +1310,304 @@
   </div>
 </footer>
 
-  <div class="overlay none fixed-block" data-overlay>
-
-
-  <div class="modal" data-popup="1">
+  <div class="overlay fixed-block" data-overlay>
+  <div class="modal has-gradient" data-popup="confirm-trade">
     <div class="modal__box" role="dialog" aria-modal="true">
-      <button class="close modal__close" aria-label="Закрыть модальное окно"></button>
+      <button class="close modal__close" aria-label="Закрыть модальное окно">
+        <svg width="14" height="14">
+          <use href="img/sprite/sprite.svg#close-circle"></use>
+        </svg>
+      </button>
+
+      <div class="modal__top">
+        <div class="modal__icon blue-shadow">
+          <img width="62" height="62" src="img/sprite/bitcoin.svg" alt="icon">
+        </div>
+
+        <button class="convert-btn">
+          <svg width="24" height="24">
+            <use href="img/sprite/sprite.svg#arrow-swap"></use>
+          </svg>
+        </button>
+
+        <div class="modal__icon red-shadow">
+          <img width="62" height="62" src="img/sprite/tron.svg" alt="icon">
+        </div>
+      </div>
+
+      <div class="modal__content">
+        <span class="modal__title">
+          Do you want to trade <br> 1000 GH/s for 1000 TRX?
+        </span>
+
+        <span class="modal__descr">
+          You will be charged a <i>7%</i> fee for TRX withdrawals when you confirm the transaction
+        </span>
+      </div>
+
+      <div class="modal__buttons">
+        <button class="modal__button modal__button--full">Yes</button>
+        <button class="modal__button modal__button--transparent">No</button>
+        <span class="modal__info">
+          As a reminder: 1 GH/s = 1 TRX
+        </span>
+      </div>
+
     </div>
   </div>
 
+  <div class="modal modal--buy has-gradient" data-popup="confirm-buy">
+    <div class="modal__box" role="dialog" aria-modal="true">
+      <button class="close modal__close" aria-label="Закрыть модальное окно">
+        <svg width="14" height="14">
+          <use href="img/sprite/sprite.svg#close-circle"></use>
+        </svg>
+      </button>
+
+      <div class="modal__top">
+        <div class="modal__icon red-shadow">
+          <img width="62" height="62" src="img/sprite/tron.svg" alt="icon">
+        </div>
+
+        <button class="convert-btn">
+          <svg width="24" height="24">
+            <use href="img/sprite/sprite.svg#arrow-swap"></use>
+          </svg>
+        </button>
+
+        <div class="modal__icon blue-shadow">
+          <img width="62" height="62" src="img/sprite/bitcoin.svg" alt="icon">
+        </div>
+      </div>
+
+      <div class="modal__content">
+        <span class="modal__title">
+          You want to buy 1000 GH/s <br> for 1000 TRX?
+        </span>
+      </div>
+
+      <div class="modal__buttons">
+        <button class="modal__button modal__button--full">Yes</button>
+        <button class="modal__button modal__button--transparent">No</button>
+        <span class="modal__info">
+          As a reminder: 1 GH/s = 1 TRX
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+   <div class="modal" data-popup="confirm">
+    <div class="modal__box" role="dialog" aria-modal="true">
+      <button class="close modal__close" aria-label="Закрыть модальное окно">
+        <svg width="14" height="14">
+          <use href="img/sprite/sprite.svg#close-circle"></use>
+        </svg>
+      </button>
+
+      <div class="modal__content">
+        <span class="modal__title">
+          Do you confirm the exchange <br> of cryptocurrency?
+        </span>
+      </div>
+
+      <div class="modal__buttons">
+        <button class="modal__button modal__button--full">Yes</button>
+        <button class="modal__button modal__button--transparent">No</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal" data-popup="done">
+    <div class="modal__box" role="dialog" aria-modal="true">
+      <button class="close modal__close" aria-label="Закрыть модальное окно">
+        <svg width="14" height="14">
+          <use href="img/sprite/sprite.svg#close-circle"></use>
+        </svg>
+      </button>
+
+      <div class="modal__done">
+        <img width="108" height="120" src="img/done.svg" alt="done">
+      </div>
+
+      <div class="modal__content">
+        <span class="modal__title">
+          Application successful!
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" data-popup="withdraw">
+    <div class="modal__box" role="dialog" aria-modal="true">
+      <button class="close modal__close" aria-label="Закрыть модальное окно">
+        <svg width="14" height="14">
+          <use href="img/sprite/sprite.svg#close-circle"></use>
+        </svg>
+      </button>
+
+      <div class="modal__content">
+        <span class="modal__title">
+          Withdraw
+        </span>
+      </div>
+
+      <form class="modal-withdraw">
+        <div class="modal-withdraw__item">
+          <span class="modal-withdraw__name">
+            Your balance:
+          </span>
+          <div class="modal-withdraw__balance">
+            <span class="modal-withdraw__current red-shadow">
+              <input type="hidden" name="balance" value="2000">
+              <svg width="28" height="28">
+                <use href="img/sprite/sprite.svg#tron-icon"></use>
+              </svg>
+              2000 <i>trx</i>
+            </span>
+            <button class="btn-all">
+              aii
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-withdraw__item">
+          <span class="modal-withdraw__name">
+            Your wallet:
+          </span>
+          <label for="wallet" class="modal-withdraw__label">
+            <svg width="28" height="28">
+              <use href="img/sprite/sprite.svg#wallet"></use>
+            </svg>
+            <input type="text" name="wallet" placeholder="Enter your wallet">
+          </label>
+        </div>
+
+        <button class="modal-withdraw__button blue-btn" data-btn-inner="done">
+          Withdraw all
+        </button>
+
+      </form>
+
+
+    </div>
+  </div>
+
+  <div class="modal" data-popup="promo">
+    <div class="modal__box" role="dialog" aria-modal="true">
+      <button class="close modal__close" aria-label="Закрыть модальное окно">
+        <svg width="14" height="14">
+          <use href="img/sprite/sprite.svg#close-circle"></use>
+        </svg>
+      </button>
+
+      <div class="modal__content">
+        <span class="modal__title">
+          Promo Tools
+        </span>
+      </div>
+
+
+      <div class="promo-box">
+        <div class="promo-box__image">
+          <picture>
+            <source type='image/webp' srcset='img/promo.webp'>
+            <img loading='lazy' width='408' height='179' src='img/promo.png' alt='image'>
+          </picture>
+        </div>
+
+        <ul class="promo-box__list">
+          <li class="promo-box__item">
+            <label class="promo-box__label">
+              <input type="radio" name="size" groupe="size">
+              <span class="promo-box__content">
+                125х125
+              </span>
+            </label>
+          </li>
+          <li class="promo-box__item">
+            <label class="promo-box__label">
+              <input type="radio" name="size" groupe="size">
+              <span class="promo-box__content">
+                240x400
+              </span>
+            </label>
+          </li>
+          <li class="promo-box__item">
+            <label class="promo-box__label">
+              <input type="radio" name="size" groupe="size">
+              <span class="promo-box__content">
+                300x300
+              </span>
+            </label>
+          </li>
+          <li class="promo-box__item">
+            <label class="promo-box__label">
+              <input type="radio" name="size" groupe="size">
+              <span class="promo-box__content">
+                486x60
+              </span>
+            </label>
+          </li>
+          <li class="promo-box__item">
+            <label class="promo-box__label">
+              <input type="radio" name="size" groupe="size" checked>
+              <span class="promo-box__content">
+                728x90
+              </span>
+            </label>
+          </li>
+        </ul>
+
+      </div>
+
+
+      <form action="#" class="copy-form buffer">
+        <span class="copy-form__name">
+          Your link to banner 728x90
+        </span>
+        <label for="#" class="copy-form__label">
+          <input type="text" class="copy-form__input buffer__input" value="https://ProofStaking.pro/ref/0xb933950393ab8b">
+          <button class="copy-form__btn buffer__button blue-btn">
+            <svg width="24" height="24">
+              <use href="img/sprite/sprite.svg#copy"></use>
+            </svg>
+            <span>Copy link</span>
+          </button>
+        </label>
+      </form>
 
 
 
 
+    </div>
+  </div>
+
+  <div class="modal modal-win" data-popup="win">
+    <div class="modal__box" role="dialog" aria-modal="true">
+      <button class="close modal__close" aria-label="Закрыть модальное окно">
+        <svg width="14" height="14">
+          <use href="img/sprite/sprite.svg#close-circle"></use>
+        </svg>
+      </button>
+
+      <div class="modal-win__box">
+        <div class="modal-win__label">
+          <span class="modal-win__icon">
+            <img width="24" height="24" src="img/win.svg" alt="icon">
+          </span>
+          you win
+        </div>
+
+        <span class="modal-win__value">
+          +0.001 TRX
+        </span>
+
+      </div>
+
+    </div>
+  </div>
 </div>
 
 </body>

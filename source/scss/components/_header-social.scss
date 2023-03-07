@@ -5,16 +5,19 @@
   overflow: hidden;
   border-radius: 12px;
   right: 0;
-  transform: translateX(50vw);
+  transform: translateX(200vw);
   top: var(--header-height);
   padding: 20px 20px 24px;
   display: flex;
   flex-direction: column;
   grid-gap: 14px;
-  transition: transform .8s;
+  opacity: 0;
+  transition: all .9s;
 
   &.active {
+    opacity: 1;
     transform: translateX(0);
+    transition: all .9s ;
   }
 
   &__title {

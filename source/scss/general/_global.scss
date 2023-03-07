@@ -291,19 +291,18 @@ fieldset {
   border: none;
 }
 
+
 .modal {
-  position: relative;
+  position: absolute;
   left: 50%;
-  transform: translate(-50%, 0vh);
+  transform: translate(-50%,-50%);
   opacity: 0;
-  grid-row: 1;
-  grid-column: 1;
   transition: opacity 1s;
   pointer-events: none;
+  top: 50%;
 
   &.active {
-    position: relative;
-    transform: translate(-50%,0);
+    position: fixed;
     opacity: 1;
     z-index: 20;
     transition: opacity 1s;

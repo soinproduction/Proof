@@ -44,6 +44,7 @@
 
   svg {
     fill: transparent;
+    stroke: currentColor;
   }
 }
 
@@ -200,6 +201,26 @@
     fill: transparent;
     stroke: currentColor;
   }
+}
+
+.btn-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 111, 246, 0.3);
+  border: 1px dashed var(--br-d);
+  border-radius: 6px;
+  width: 36px;
+  height: 33px;
+  flex-shrink: 0;
+
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: rgba(var(--cl-a),1.0);
+  text-transform: uppercase;
 }
 
 .convert-btn {

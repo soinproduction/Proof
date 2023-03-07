@@ -1372,7 +1372,7 @@
 
                   </div>
 
-                  <button class="mining-convert__button blue-btn">
+                  <button class="mining-convert__button blue-btn" data-btn-modal="confirm-buy">
                     Buy GH/s
                   </button>
 
@@ -1704,9 +1704,15 @@
                         <span class="mining-convert__name">
                           Amount:
                         </span>
-                        <input type="number" value="2000" class="mining-convert__input">
+                        <div class="mining-convert__coll-wrapp">
+                          <button class="btn-all">
+                            aii
+                          </button>
+                          <input type="number" value="2000" class="mining-convert__input">
+                        </div>
+
                         <span class="mining-convert__name">
-                          Enter an amount
+                          Only outputs all
                         </span>
                       </div>
                     </div>
@@ -1729,7 +1735,7 @@
                         </span>
                         <input type="number" value="2000" class="mining-convert__input">
                         <span class="mining-convert__name">
-                          After purchase
+                          After the sale
                         </span>
                       </div>
                     </div>
@@ -1742,8 +1748,8 @@
 
                   </div>
 
-                  <button class="mining-convert__button blue-btn">
-                    Buy GH/s
+                  <button class="mining-convert__button blue-btn" data-btn-modal="confirm-trade">
+                    Sell All GH/s
                   </button>
 
                 </form>
@@ -2128,7 +2134,7 @@
                     </label>
                   </div>
 
-                  <button class="exchange-form__button blue-btn">
+                  <button class="exchange-form__button blue-btn" data-btn-modal="confirm">
                     Exchange
                   </button>
                 </form>
@@ -2239,7 +2245,7 @@
                         </span>
                       </div>
 
-                      <button class="withdrawal-table__button blue-btn">
+                      <button class="withdrawal-table__button blue-btn" data-btn-modal="withdraw">
                         Wthdrawal
                       </button>
 
@@ -2273,7 +2279,7 @@
                         </span>
                       </div>
 
-                      <button class="withdrawal-table__button blue-btn">
+                      <button class="withdrawal-table__button blue-btn" data-btn-modal="withdraw">
                         Wthdrawal
                       </button>
 
@@ -2307,7 +2313,7 @@
                         </span>
                       </div>
 
-                      <button class="withdrawal-table__button blue-btn">
+                      <button class="withdrawal-table__button blue-btn" data-btn-modal="withdraw">
                         Wthdrawal
                       </button>
 
@@ -2341,7 +2347,7 @@
                         </span>
                       </div>
 
-                      <button class="withdrawal-table__button blue-btn">
+                      <button class="withdrawal-table__button blue-btn" data-btn-modal="withdraw">
                         Wthdrawal
                       </button>
 
@@ -2375,7 +2381,7 @@
                         </span>
                       </div>
 
-                      <button class="withdrawal-table__button blue-btn">
+                      <button class="withdrawal-table__button blue-btn" data-btn-modal="withdraw">
                         Wthdrawal
                       </button>
 
@@ -2726,7 +2732,7 @@
                         <span>Copy link</span>
                       </button>
                     </label>
-                    <a href="#" class="copy-form__link blue-btn">Promo tools</a>
+                    <button class="copy-form__link blue-btn" data-btn-modal="promo">Promo tools</button>
                   </form>
                 </div>
               </div>
